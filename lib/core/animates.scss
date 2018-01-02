@@ -1,0 +1,32 @@
+$direction: down, up, left, right;
+@each $key in $direction {
+	.#{$prefix}-popup-#{$key} {
+		@include animateSlide($key);
+	}
+}
+
+.#{$prefix}-bg-mask {
+	@include commonAbsolute(0, 0, 0, 0);
+	@include commonSize(100%);
+	background: $mask-bg-color;
+	z-index: $mask-zindex;
+	animation-name: animate-fadeIn;
+	animation-duration: $mask-duration;
+	animation-timing-function: $mask-timing;
+}
+
+.#{$prefix}-modal {
+	@extend .#{$prefix}-bg-mask;
+	@include commonFlexCc;
+	> * {
+		width: 210px / $scale;
+		min-height: 100px / $scale;
+		max-height: 90%;
+		overflow: auto;
+		z-index: $modal-zindex;
+		background: $modal-bg-color;
+		animation-name: animate-zoomIn;
+		animation-duration: $modal-duration;
+		animation-timing-function: $modal-timing;
+	}
+}

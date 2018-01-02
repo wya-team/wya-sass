@@ -1,0 +1,31 @@
+/**
+ * 表单
+ */
+
+.g-form {
+	width: 100%;
+	background: $form-bg-color;
+	.__item {
+		display: flex;
+		align-items: center;
+		margin: 0 #{$form-item-margin / $scale};
+		line-height: #{$form-line-height / $scale};
+		@include commonBorder(b);
+		&:last-child {
+			border-bottom: none;
+		}
+		input {
+			flex: 1;
+			color: $form-font-color;
+		}
+		label {
+			flex: 0 0 #{$form-label-width / $scale};
+		}
+	}
+	.__none {
+		margin: 0;
+	}
+	button {
+		@include btnLargeBase($form-btn-bg-color, $form-btn-color)
+	}
+}

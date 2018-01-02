@@ -1,0 +1,173 @@
+/**
+ * layout 定义全局样式
+ */
+/**
+ *  定义全局需要的font-size(lists)
+ *  return g-fs-12
+ */
+$fontSize: 12, 14, 16, 18, 26, 28, 30, 32, 36, 50, 60, 90, 100  !default;
+$lineHeight: 44, 60, 72, 80, 88, 120 !default;
+/**
+ *  定义全局需要的 color(lists)
+ *  (name:名称, value:值)
+ *  return g-c-pink
+ */
+$color: ('main-1', $main-color-1), 
+		('main-2', $main-color-2),
+		('main-3', $main-color-3), 
+		('main-4', $main-color-4),
+		('pink-1', $pink_1), 
+		('orange-1', $orange_1),
+		('blue-1', $blue_1), 
+		('blue-2', $blue_2),
+		('yellow', $yellow), 
+		('purple', $purple),
+		('deep', $font-color-deep), 
+		('dark', $font-color-dark),
+		('mid', $font-color-mid), 
+		('light', $font-color-light),
+		!default;
+/**
+ *  定义全局需要的 bgColor
+ *  (name:名称, value:值, color:字体颜色，默认白色)
+ *  return g-bg-pink
+ */
+$bgColor: ('main-1', $main-color-1), 
+		('main-2', $main-color-2),
+		('main-3', $main-color-3), 
+		('main-4', $main-color-4),
+		('pink-1', $pink_1), 
+		('orange-1', $orange_1),
+		('blue-1', $blue_1), 
+		('blue-2', $blue_2),
+		('yellow', $yellow), 
+		('purple', $purple),
+		('deep', $font-color-deep), 
+		('dark', $font-color-dark),
+		('mid', $font-color-mid), 
+		('light', $font-color-light, $pink_1),
+		!default;
+/**
+ *  定义全局需要的padding(lists)
+ *  > string(定义方向 t(top), b(bottom), l(left), r(right))
+ *  , list(定义该方向要用的数值，可以是number，或者是maps(名称:值))
+ *  return g-pd-15 / g-pd-sm / g-m-tb-10
+ */
+$padding: ('', ('sm':$padding-sm) ('md':$padding-md) ('lg':$padding-lg)), 
+		('tb', ('sm':$padding-sm) ('md':$padding-md) ('lg':$padding-lg) ), 
+		('lr', ('sm':$padding-sm) ('md':$padding-md) ('lg':$padding-lg) ),
+		('t', ('xs':$padding-xs) ('md':$padding-md) ('lg':$padding-lg) ('xl':$padding-xl)),
+		('l', ('sm':$padding-sm) ('md':$padding-md) ('lg':$padding-lg) ('xl':$padding-xl));
+
+/**
+ *  定义全局需要的margin(lists)
+ *  > string(定义方向 t(top), b(bottom), l(left), r(right))
+ *  , list(定义该方向要用的数值，可以是number，或者是maps(名称:值))
+ *  return g-m-15 / g-m-tb-10em
+ */
+$margin: ('', ('sm':$margin-sm) ('md':$margin-md) ('lg':$margin-lg)), 
+		('tb', ('sm':$margin-sm) ('md':$margin-md) ('lg':$margin-lg) ), 
+		('lr', ('sm':$margin-sm) ('md':$margin-md) ('lg':$margin-lg) ),
+		('t', ('xs':$margin-xs) ('md':$margin-md) ('lg':$margin-lg) ('xl':$margin-xl)),
+		('l', ('sm':$margin-sm) ('md':$margin-md) ('lg':$margin-lg) ('xl':$margin-xl));
+
+$imgSize: 40, 60, 80, 100, 120, 140, 160;
+
+/**
+ *  定义栅格布局 12等分
+ *  return g-w-value, g-fw-value 浮动
+ */
+$total: 12 !default;
+
+@include globalLayout($total);
+@include globalColor($color);
+@include globalBgColor($bgColor);
+
+@include globalFontSize($fontSize);
+@include globalLineHeight($lineHeight);
+@include globalPadding($padding);
+@include globalMargin($margin);
+@include globalImgSize($imgSize);
+
+.#{$prefix}-br-circle {
+	border-radius: 100%;
+}
+
+.#{$prefix}-bb {
+	@include commonBorder(b);
+}
+
+.#{$prefix}-br {
+	@include commonBorder(r);
+}
+
+.#{$prefix}-bl {
+	@include commonBorder(l);
+}
+
+.#{$prefix}-bt {
+	@include commonBorder(t);
+}
+
+.#{$prefix}-tc {
+	text-align: center;
+}
+
+.#{$prefix}-tl {
+	text-align: left;
+}
+
+.#{$prefix}-tr {
+	text-align: right;
+}
+
+.#{$prefix}-td-lh {
+	text-decoration: line-through;
+}
+
+.#{$prefix}-td-ul {
+	text-decoration: underline;
+}
+
+.#{$prefix}-nowrap {
+	white-space: nowrap;
+}
+
+.#{$prefix}-nobreak {
+	@include commonNoBreak;
+}
+
+.#{$prefix}-relative {
+	position: relative!important;
+}
+
+.#{$prefix}-absolute {
+	position: absolute!important;
+}
+.#{$prefix}-clearfix:before,
+.#{$prefix}-clearfix:after,
+.#{$prefix}-row:before,
+.#{$prefix}-row:after {
+	display: table;
+	content: " ";
+}
+.#{$prefix}-clearfix:after,
+.#{$prefix}-row:after {
+	clear: both;
+}
+.#{$prefix}-row {
+	margin: 0;
+	padding: 0;
+}
+.#{$prefix}-fr {
+	float: right;
+}
+.#{$prefix}-fl {
+	float: left;
+}
+.#{$prefix}-h-full {
+	height: 100vh
+}
+
+
+

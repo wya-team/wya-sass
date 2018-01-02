@@ -1,0 +1,65 @@
+/**
+ * flex
+ */
+
+.#{$prefix}-flex{
+	display: flex;
+	box-sizing: border-box;
+}
+
+.#{$prefix}-col {
+	flex: 1
+}
+
+.#{$prefix}-col-2 {
+	flex: 2
+}
+
+.#{$prefix}-full {
+	flex: 0 0 100%;
+}
+
+.#{$prefix}-1of2 {
+	flex: 0 0 50%;
+}
+
+.#{$prefix}-1of3 {
+	flex: 0 0 33.3333%;
+}
+
+.#{$prefix}-1of4 {
+	flex: 0 0 25%;
+}
+
+// 圣杯布局
+.#{$prefix}-flex-holy {
+	display: flex;
+	box-sizing: border-box;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+// 水平垂直对齐
+.#{$prefix}-flex-cc {
+	@include commonFlexCc;
+}
+
+.#{$prefix}-flex-ac {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+}
+.#{$prefix}-flex-grid-3 {
+	@include globalGrid();
+}
+
+.#{$prefix}-flex-grid-4 {
+	@include globalGrid(4);
+}
+@include globalFlex(flex-direction, row, column, row-reverse, column-reverse);
+@include globalFlex(flex-wrap, wrap, wrap-reverse, nowrap);
+@include globalFlex(justify-content, flex-start, flex-end, center, space-between, space-around);
+@include globalFlex(align-items, flex-start, flex-end, center, baseline, stretch);
+@include globalFlex(align-content, flex-start, flex-end, center, space-between, space-around, stretch);
+@include globalFlex(align-self, auto, flex-start, flex-end, center, baseline, stretch);
+

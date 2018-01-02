@@ -1,0 +1,119 @@
+/**
+ * reset
+ */
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: $font-size-base !important;
+}
+
+body {
+	overflow: hidden;
+	background-color: $body-bg-color;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	border: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/**
+	 * 字体样式不模糊
+	 */
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	/**
+	 * 可以复制粘帖
+	 */
+	-webkit-user-select: text !important;
+	user-select: text !important;
+}
+
+/**
+ * g-reset
+ * 用户初始化元素的类
+ */
+.g-reset ol,
+.g-reset ul,
+.g-reset li {
+	list-style: none;
+}
+
+.g-reset a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.g-reset img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+.g-reset .inline {
+	display: inline
+}
+
+.g-reset i,
+.g-reset b,
+.g-reset em,
+.g-reset span {
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+}
+
+/**
+ * scrollbar width
+ */
+::-webkit-scrollbar {
+	width: 4px / $scale;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 2px / $scale;
+}
+
+/**
+ * scrollbar bg
+ */
+
+::-webkit-scrollbar-track {
+	box-shadow: $scrollbar-track-box-shadow;
+	border-radius: 5px / $scale;
+	background: $scrollbar-track-bg-color;
+}
+
+/**
+ * Handle
+ */
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px / $scale;
+	background: $scrollbar-thumb-bg-color;
+}
+
+#pages,
+[class*="scroll-wrap-content"] {
+	overflow: auto;
+}
+
+[class*="scroll-container"]  {
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	overflow: auto;
+	&.__none{
+		-webkit-overflow-scrolling: auto;
+		overflow-scrolling: auto;
+	}
+}
+
+[class*="g-bg-"] {
+	color: white;
+}
+
+[class*="g-bg-"] input {
+	color: black;
+}
