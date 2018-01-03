@@ -2,7 +2,7 @@
 	"name": "wya-sass",
 	"version": "0.1.2",
 	"description": "A modern alternative to Sass",
-	"main": "dist/index.scss",
+	"main": "dist/index.css",
 	"files": ["lib/**", "dist/**", "examples/**"],
 	"scripts": {},
 	"author": "wya-team",
