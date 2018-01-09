@@ -1,27 +1,4 @@
-# 说明
-## 一、目录
-* themes 定义公共的变量
-  * color.scss 颜色变量
-  * default.scss 全局变量
-* mixins 定义公共的方法
-  * animate.scss 动画
-  * common.scss 公共方法
-* core 输出全局的样式
-  * globals.scss 定义全局变量的方法
-  * reset.scss 输出g-reset样式
-  * animate.scss 输出动画
-  * flex.scss 输出flex布局
-  * layout.scss 输出全局变量
-  * mobile 手机端模块样式
-  * pc pc端模块样式
-
-#### 使用方法
-```scss
-  @import "../themes/default"; <br />
-  @import "../mixins/index";
-```
-
-## 二、CSS 功能拓展
+# CSS 功能拓展
 * 嵌套规则、父选择器&、属性嵌套、位符选择器 %
 
 ### SassScript

@@ -1,77 +1,7 @@
-# wya-sass 
-[![npm][npm-image]][npm-url] [![changelog][changelog-image]][changelog-url]
-
-```
-npm install --save wya-sass
-```
-
-[1. 准则](#1)  
-
-[2. 文件目录](#2)
- 
-[3. 命名规范](#3) 
-
-[4. 使用方式](#4)
-
-[5. 样式输出](#5)
-
-* [ 5.1 flex ](#5.1) 
-* [ 5.2 layout ](#5.2) 
-* [ 5.3 柵格 ](#5.3) 
-* [ 5.4 定位 ](#5.4) 
-* [ 5.5 辅助 ](#5.5) 
-* [ 5.6 动画 ](#5.6) 
-
-### <h3 id="1">准则</h3>
-1. 以flex布局为主，栅格布局、固定布局、流体布局，绝对定位布局，浮动布局等为辅的一套css样式表。
-2. 常见的flex布局和flex单个属性类。
-3. 辅助布局类。
-
-### <h3 id="2"> 文件目录</h3>
-+ themes 定义公共的变量
-  - color.scss 颜色变量
-  - default.scss 全局变量
-+ mixins 定义公共的方法
-  - animate.scss 动画
-  - common.scss 公共方法
-+ core 输出全局的样式
-  - globals.scss 定义全局变量的方法
-  - reset.scss 输出reset样式
-  - animate.scss 输出动画
-  - flex.scss 输出flex布局
-  - layout.scss 输出全局变量
-  - module 模块样式
-
-### <h3 id="3">命名规范</h3>
-* 全局命名以 `g-` 开头
-* 模块命名以 `v-` 开头
-	1. 外层：以 `v-` 开头， v-(路由简写)-(组件模块)， 例如： `v-home-header`;
-	2. 内层：以`_` 开头， `_`(模块)， 例如： `_tab `;
-* 公共组件命名以 `c-` 开头
-	1. 外层：以 `c-` 开头， c-(弹层功能)-(结构)， 例如： `c-addr-header`;
-	2. 内层：以`__` 开头， `__`(模块)， 例如： `__tab `; 
+#样式输出
 
 
-### <h3 id="4">使用方法</h3>
-在需要引用公共变量的时候，一般里面可以去改变全局的颜色，边距，单位等变量。
-
-```scss
-  @import "../themes/default"; // 公共变量
-```
-在需要引用公共方法的时候，可以去调用全局定义的方法，例如：`@include commonScale(100px)`。
-
-```scss
-  @import "../mixins/common"; // 公共方法
-```
-在需要引用动画方法的时候，定义了例如： `@keyframes animate-fadeIn` 淡入等动画。
-
-```scss
-  @import "../mixins/animate"; // 公共动画
-```
-
-###  <h3 id="5">样式输出</h3>
-
-*  <h5 id="5.1"> 5.1 flex </h5>
+*  flex
 
 >百分比布局
 
@@ -140,7 +70,7 @@ npm install --save wya-sass
 |...| |||
 
 
-*  <h5 id="5.2">  5.2 layout </h5>
+* layout 
 
 > color  g-c-(颜色／变量) 
 
@@ -198,7 +128,7 @@ npm install --save wya-sass
 |... ||
 
 
-*  <h5 id="5.3"> 5.3 柵格 </h5>
+*  柵格
 
 | class  | 备注  |
 |:-------------|:---------------| 
@@ -206,7 +136,7 @@ npm install --save wya-sass
 |.g-w-(number)| 12>= number >=1 |  
 |.g-fw-(number)| 12>= number >=1 float:left;|
 
-*  <h5 id="5.4">  5.4 定位 
+*  定位 
 
 | class  | 备注  |
 |:-------------|:---------------| 
@@ -214,7 +144,7 @@ npm install --save wya-sass
 |.g-relative| 绝对定位|  
 |.g-absolute| 相对定位|
 
-*  <h5 id="5.5">  5.5 浮动  </h5>
+*  浮动 
 
 | class  | 备注  |
 |:-------------|:---------------| 
@@ -222,7 +152,7 @@ npm install --save wya-sass
 |.g-fr | 右浮|  
 |.g-fl | 左浮|
 
-*  <h5 id="5.6"> 5.6 辅助 </h5>
+*  辅助 
 
 > 1像素边框
  
@@ -243,18 +173,27 @@ npm install --save wya-sass
 |.g-td-lh| 删除线|
 |.g-td-ul| 下划线|
 |.g-nowrap| 不换行|
-|.g-nobreak| 字母数字不换行|
+|.g-nobreak| 单词不换行|
 |.g-tl| 文本居左|
 |.g-tr| 文本居右|
+|.g-oneline| 一行文字|
+|.g-twoline| 两行文字|
+|.g-one-lh| 一行文字 限高|
+|.g-two-lh|两行文字 限高|
 
 > 其他
 
 | class  | 备注  |
 |:-------------|:---------------| 
 |.g-h-full| height: 100vh; |
+|.g-br-circle| border-radius: 100%; |
+|.g-br-sem| 默认圆角 (8px) |
+|.g-bs| 边框阴影|
+|.g-disabled| 禁用事件 |
+|.g-noanimate| 禁用动画|
 
 
-*  <h5 id="5.7"> 5.7动画 </h5>
+*  动画 
 
 | class  | 备注  |
 |:-------------|:---------------| 
@@ -264,35 +203,3 @@ npm install --save wya-sass
 |.g-popup-left| 向左弹出 height：50% |
 |.g-popup-right| 向右弹出 height：50% |
 |.g-modal| 居中弹窗 |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--  以下内容无视  -->
-[changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg
-[changelog-url]: CHANGELOG.md
-
-[npm-image]: https://img.shields.io/npm/v/wya-sass.svg
-[npm-url]: https://www.npmjs.com/package/wya-sass
