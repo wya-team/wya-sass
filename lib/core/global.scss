@@ -40,7 +40,7 @@
 	}
 }
 /**
- * [globalFontSize 输出全局g-fs-#{值}]
+ * [globalFontSize 输出全局g-lh-#{值}]
  * @param  {[number]} $fontSize   [font-size的值]
  * @param  {[string]} $unit:$unit [单位]
  * @return {[type]}             [description]
@@ -235,7 +235,11 @@
 		}
 	}
 }
-
+/**
+ * [globalImgSize 图片大小]
+ * @param     {[type]}    $imgsize [description]
+ * @return    {[type]}             [description]
+ */
 @mixin globalImgSize($imgsize){
 	@for $i from 1 through length($imgsize) {
 		.#{$prefix}-img-#{nth($imgsize, $i)} {
