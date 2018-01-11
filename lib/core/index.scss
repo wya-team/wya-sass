@@ -1,11 +1,17 @@
 @import "../themes/default";
-@import "../mixins/common";
 @import "../themes/assist";
+@import "../mixins/common";
+@import "../mixins/animate";
+@import "../mixins/pc";
 
+
+// 基础样式
 @import "reset";
 @import "global";
 @import "flex";
 @import "layout";
-
-@import "../mixins/animate";
 @import "animates";
+
+// 全部样式
+@import "mobile";
+@import "pc";
