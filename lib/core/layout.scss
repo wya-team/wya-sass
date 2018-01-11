@@ -21,6 +21,12 @@
  */
 @include globalBgColor($bg-color-list);
 /**
+ *  定义全局需要的 bgLineColor
+ *  (name:名称, value:值, color:字体颜色，默认白色)
+ *  return g-bg-lg-pink
+ */
+@include globalBgLineColor($bg-line-color-list);
+/**
  *  定义全局需要的font-size(lists)
  *  return g-fs-12
  */
@@ -162,21 +168,13 @@
  * 一行文字
  */
 .#{$prefix}-oneline {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 1;
-	-webkit-box-orient: vertical;
+	@include commonTextLine(1);
 }
 /**
  * 两行文字
  */
 .#{$prefix}-twoline {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	-webkit-box-orient: vertical;
+	@include commonTextLine(2);
 }
 /**
  * 两行文字 限高
@@ -191,4 +189,11 @@
 .#{$prefix}-one-lh {
 	height: $line-height-limit / $scale;
 	line-height: $line-height-limit / $scale;
+}
+
+.#{$prefix}-hide {
+	display: hidden;
+}
+.#{$prefix}-show {
+	display: block;
 }

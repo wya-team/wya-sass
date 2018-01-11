@@ -23,7 +23,7 @@
 ```
 * 1px边框的兼容问题
 
-`commonBorder($border: ltbr)`  `$border` 默认四个方位
+`commonBorder($border: ltbr, $color: $border-color, $width: 1, $border-type: solid )`  `$border` 默认四个方位
 
 ```scss
 .test{

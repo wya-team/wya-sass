@@ -61,32 +61,50 @@
  * @param  {[string]} $border: ltbr          [border的方向缩写拼接]
  * @return {[type]}          [1px border]
  */
-@mixin commonBorder($border: ltbr) {
-	position: relative;
-	border: none;
-	transform: translateZ(0);
-	&:before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: $scale * 100%;
-		height: $scale * 100%;
-		transform-origin: 0 0;
-		transform: scale(1 / $scale);
-		box-sizing: border-box;
-		pointer-events: none;
-		z-index: -1;
-		@each $key in $border {
-			$len: str_length($border);
-			@while $len > 0 {
-				@if (commonDirectionFill(str_slice($border, $len, $len))) {
-					border-#{commonDirectionFill(str_slice($border, $len, $len))}: 1px solid $border-color;
+@mixin commonBorder($border: ltbr, $color: $border-color, $width: 1, $border-type: solid ) {
+	@if ($width == 1) {
+		position: relative;
+		border: none;
+		transform: translateZ(0);
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: $scale * 100%;
+			height: $scale * 100%;
+			transform-origin: 0 0;
+			transform: scale(1 / $scale);
+			box-sizing: border-box;
+			pointer-events: none;
+			z-index: -1;
+			@each $key in $border {
+				$len: str_length($border);
+				@while $len > 0 {
+					@if (commonDirectionFill(str_slice($border, $len, $len))) {
+						border-#{commonDirectionFill(str_slice($border, $len, $len))}: 1px $border-type $color;
+					}
+					$len: $len - 1;
 				}
-				$len: $len - 1;
 			}
 		}
+	}else{
+		$len: str_length($border);
+		@if ($len >= 4){
+			border: $width / $scale $border-type $color; 
+		}else{
+			@each $key in $border {			
+				@while $len > 0 {
+					@if (commonDirectionFill(str_slice($border, $len, $len))) {
+						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width / $scale $border-type $color;
+					}
+					$len: $len - 1;
+				}
+			}
+		}
+		
 	}
+	
 }
 
 /**

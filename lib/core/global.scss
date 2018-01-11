@@ -190,6 +190,20 @@
 	}
 }
 /**
+ * [globalBgLineColor 输出全局渐变背景颜色]
+ * @param  {[array]} $bgColor [方向 名称 背景色1 背景色2]
+ * @return {[type]}          [description]
+ */
+@mixin globalBgLineColor($bgLineColor) {
+	@each $grad, $name, $code, $code2 in $bgLineColor {
+		@if (type-of($code) == 'color') {
+			.#{$prefix}-bg-lg-#{$name} {
+				@include commonBgLinear($grad, $code, $code2);
+			}
+		}
+	}
+}
+/**
  * [globalFlex 输出flex单个属性]
  * @param  {[string]} $attr   [属性名]
  * @param  {[array]} $key... [属性值]

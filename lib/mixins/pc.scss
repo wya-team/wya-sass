@@ -1,0 +1,184 @@
+// btn
+/**
+ * @DateTime  2018-01-11
+ * 通用按钮
+ * @param     {[type]}    $bgColor           [description]
+ * @param     {[type]}    $hoverBg           [description]
+ * @param     {[type]}    $color             [description]
+ * @param     {[type]}    $hoverColor:$color [description]
+ * @return    {[type]}                       [description]
+ */
+@mixin btnBasePc($bgColor, $hoverBg, $color, $hoverColor:$color) {
+    display: inline-block;
+    padding: 0 $btn-pd-lr / $scale;
+    height: $btn-height / $scale;
+    line-height: $btn-height / $scale;
+    border-radius: $btn-radius / $scale;
+    background: $bgColor;
+    color: $color;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $btn-font-size / $scale;
+    &:hover {
+        background: $hoverBg;
+        color: $hoverColor;
+    }
+    &:active {
+        background: darken($hoverBg, 5%);
+    }
+}
+@mixin btnLineBasePc($gradient, $bgColor, $hoverBgStart, $hoverBgEnd, $color, $hoverColor:$color) {
+    display: inline-block;
+    padding: 0 $btn-pd-lr / $scale;
+    height: $btn-height / $scale;
+    line-height: $btn-height / $scale;
+    border-radius: $btn-radius / $scale;
+    background: $bgColor;
+    color: $color;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $btn-font-size / $scale;
+    &:hover {
+        @include commonBgLinear($gradient, $hoverBgStart, $hoverBgEnd);
+        color: $hoverColor;
+    }
+    &:active {
+         @include commonBgLinear($gradient,  darken($hoverBgStart, 5%),  darken($hoverBgEnd, 5%));
+    }
+}
+/**
+ * @DateTime  2018-01-11
+ * 渐变颜色按钮
+ * @param     {[type]}    $bgColorStart      [description]
+ * @param     {[type]}    $bgColorEnd        [description]
+ * @param     {[type]}    $hoverBgStart      [description]
+ * @param     {[type]}    $hoverBgEnd        [description]
+ * @param     {[type]}    $color             [description]
+ * @param     {[type]}    $hoverColor:$color [description]
+ * @return    {[type]}                       [description]
+ */
+@mixin btnGradientBasePc($gradient, $bgColorStart, $bgColorEnd, $hoverBgStart, $hoverBgEnd, $color, $hoverColor:$color) {
+    display: inline-block;
+    padding: 0 $btn-pd-lr / $scale;
+    height: $btn-height / $scale;
+    line-height: $btn-height / $scale;
+    border-radius: $btn-radius / $scale;
+    color: $color;
+    text-align: center;
+    border: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $btn-font-size / $scale;
+    @include commonBgLinear($gradient, $bgColorStart, $bgColorEnd);
+    &:hover {
+       	@include commonBgLinear($gradient, $hoverBgStart, $hoverBgEnd);
+        color: $hoverColor;
+    }
+    &:active {
+    	@include commonBgLinear($gradient, darken($hoverBgStart, 5%), darken($hoverBgEnd, 5%));
+    }
+}
+/**
+ * 通用表格
+ */
+@mixin tableBasePc {
+	overflow-x: auto;
+    background: $white;
+    background: $white;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    thead {
+        th {
+            background: $table-bar;
+            font-size: $table-font-size / $scale;
+            font-weight: normal;
+            vertical-align: middle;
+            white-space: nowrap;
+            padding: ($table-tr-height - $table-line-height) / 2 / $scale  $padding-md / $scale;
+        }
+    }
+    tbody {
+        td {
+            line-height: $table-line-height;
+            padding: ($table-tr-height - $table-line-height) / 2 / $scale $padding-md / $scale;
+            @include commonBorder(b, $table-border);
+            &:after {
+                content: "";
+                display: block;
+                clear: both;
+                height: 0;
+                font-size: 0;
+                visibility: hidden;
+            }
+
+        }
+        tr.__hover:hover {
+            background: $table-hover;
+        }
+    }
+}
+
+
+/**
+ * 通用表单
+ */
+
+@mixin formBasePc {
+    @mixin switchBase() {
+        $width: 110px;
+        $size: 34px;
+        -webkit-appearance: none;
+        border: 1px solid $formBorder;
+        border-radius: $size;
+        width: $width;
+        height: $size;
+        position: relative;
+        background: #fff;
+        box-shadow: $formBorder 0 0 0 0 inset;
+        color: $lightGray;
+        display: inline-block;
+        &:after {
+            content: "关闭";
+            transition: left .3s;
+            position: absolute;
+            right: 16px;
+            line-height: $size;
+            font-size: 14px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 3;
+            transition: left .3s;
+            left: -1px;
+            width: $size - 2;
+            height: $size - 2;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,.3);
+            box-shadow: 0 1px 3px rgba(0,0,0,.3);
+            background: #fff;
+        }
+        &:checked, &.active{
+            background: $primaryOrange;
+            color: #fff;
+            &:after {
+                content: "开启";
+                left: 16px;
+            }
+            &:before {
+                content:'\e63b';
+                border-color:$primaryOrange;
+                left: $width - $size;
+                color:$primaryOrange;
+                font-family: 'iconfont';
+                line-height:$size - 2;
+                text-align: center;
+            }
+        }
+    }
+}
