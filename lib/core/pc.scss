@@ -1,0 +1,56 @@
+@import "../themes/default";
+@import "../mixins/common";
+@import "../mixins/pc";
+
+// form
+$form-bg-color: #fff;
+$form-label-width: 160px;
+$form-font-color: #666;
+$form-btn-bg-color: $orange_1;
+$form-btn-color: #fff;
+$form-item-margin: 20px;
+$form-line-height: 80px;
+
+
+
+
+//table
+$table-bar: #F0F2F7;
+$table-border: #cdcdcd;
+$table-bar: #F0F2F7;
+$table-font-size: 14px;
+$table-tr-height: 40px;
+$table-line-height: 22px;
+$table-hover: #cdcdcd;
+
+.#{$prefix}-table-pc {
+    @include tableBasePc;
+}
+// btn
+$btn-height: 34px;
+$btn-font-size: 14px;
+$btn-radius: 4px;
+$btn-pd-lr: 20px;
+.g-btn-lgr-blue-pc {
+    @include btnGradientBasePc(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
+}
+.g-btn-yellow-pc {
+    @include btnBasePc($yellow, darken($yellow, 3%), $white);
+}
+.g-btn-line-pc {
+    @include btnBasePc($yellow, darken($yellow, 3%), $white);
+}
+
+$btn-height: 22px;
+$btn-font-size: 12px;
+$btn-radius: 4px;
+$btn-pd-lr: 10px;
+.g-tip-lgr-blue-pc {
+    @include btnGradientBasePc(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
+}
+.g-tip-yellow-pc {
+    @include btnBasePc($yellow, darken($yellow, 3%), $white);
+}
+.g-tip-line-pc {
+    @include btnBasePc($yellow, darken($yellow, 3%), $white);
+}

@@ -1,8 +1,7 @@
 /**
- * 表单
+ * 通用表单
  */
-
-.g-form {
+%formBaseMobile {
 	width: 100%;
 	background: $form-bg-color;
 	.__item {
@@ -26,6 +25,7 @@
 		margin: 0;
 	}
 	button {
-		@include btnLargeBase($form-btn-bg-color, $form-btn-color)
+		@include btnBase($form-btn-color, $form-btn-color);
 	}
 }
+

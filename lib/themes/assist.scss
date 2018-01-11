@@ -1,0 +1,101 @@
+/**
+ * @file
+ * 定义常用属性
+ */
+
+// 常用字体大小
+$font-size-list-add: false !default;
+$font-size-list: 12, 14, 16, 18, 26, 28, 30, 32, 36, 50, 60, 90, 100  !default;
+@if $font-size-list-add {
+	$font-size-list: join($font-size-list, $font-size-list-add);
+}
+
+// 常用行高
+$line-height-list-add: false !default;
+$line-height-list: 44, 60, 72, 80, 88, 120 !default;
+@if $line-height-list-add {
+	$line-height-list: join($line-height-list, $line-height-list-add);
+}
+
+// 常用图片大小
+$img-size-list-add: false !default;
+$img-size-list: 40, 60, 80, 100, 120, 140, 160 !default;
+@if $img-size-list-add {
+	$img-size-list: join($img-size-list, $img-size-list-add);
+}
+
+// 常用颜色
+$color-list-add: false !default; 
+$color-list: ('red', $main-color-1), 
+		('blue', $main-color-2),
+		('yellow', $main-color-3), 
+		('blue-1', $blue_1), 
+		('blue-2', $blue_2),
+		('deep', $font-color-deep), 
+		('dark', $font-color-dark),
+		('mid', $font-color-mid), 
+		('light', $font-color-light),
+		('white', $white)
+		!default;
+@if $color-list-add {
+	$color-list: join($color-list, $color-list-add);
+}
+
+// 常用背景颜色
+$bg-color-list-add: false !default;
+$bg-color-list: ('red', $main-color-1), 
+		('blue', $main-color-2),
+		('yellow', $main-color-3), 
+		('blue-1', $blue_1), 
+		('blue-2', $blue_2),
+		('deep', $font-color-deep), 
+		('dark', $font-color-dark),
+		('mid', $font-color-mid), 
+		('light', $font-color-light, $red),
+		('white', $white, 'inherit')
+		!default;
+@if $bg-color-list-add {
+	$bg-color-list: join($bg-color-list, $bg-color-list-add);
+}
+
+// 常用渐变背景颜色
+$bg-line-color-list-add: false !default;
+$bg-line-color-list: (to right, 'blue', $blue-1, $blue-2)
+		!default;
+@if $bg-line-color-list-add {
+	$bg-line-color-list: join($bg-line-color-list, $bg-line-color-list-add);
+}
+
+// 常用padding
+$padding-list-add: false !default;
+$padding-list: ('', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ) , 
+		('tb', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ), 
+		('lr', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ),
+		('t', ('5':$padding-xs) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
+		('l', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)) 
+		!default;
+@if $padding-list-add {
+	$padding-list: join($padding-list, $padding-list-add);
+}
+
+// 常用margin
+$margin-list-add: false !default;
+$margin-list: ('', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg)), 
+		('tb', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ), 
+		('lr', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ),
+		('t', ('5':$margin-xs) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
+		('l', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)) 
+		!default;
+@if $margin-list-add {
+	$margin-list: join($margin-list, $margin-list-add);
+}
+
+// 常用 grid网格列数
+$grid-list-add: false !default;
+$grid-list: 3, 4 !default;
+@if $grid-list-add {
+	$grid-list: join($grid-list, $grid-list-add);
+}
+
+
+

@@ -1,0 +1,45 @@
+// list
+$list-bg-color: #fff;
+$list-item-line-height: 46#{$unit};
+
+// btn
+$btn-font-size: 28px;
+$btn-width: 80%; // 百分比
+$btn-padding: 20px;
+$btn-radius: 44px;
+$btn-link-font-size: 28px;
+$btn-link-width: 80%;
+$btn-link-padding: 20px;
+$btn-link-radius: 44px;
+$btn-tip-font-size: 28px;
+$btn-tip-width: 80%;
+$btn-tip-padding: 20px;
+$btn-tip-radius: 44px;
+
+// form
+$form-bg-color: #fff;
+$form-label-width: 160px;
+$form-font-color: #666;
+$form-btn-bg-color: $orange_1;
+$form-btn-color: #fff;
+$form-item-margin: 20px;
+$form-line-height: 80px;
+
+//table
+$table-bar: #f0f2f7;
+$table-border: #cdcdcd;
+$table-bar: #f0f2f7;
+$table-font-size: 14px;
+$table-tr-height: 40px;
+$table-line-height: 22px;
+$table-hover: #cdcdcd;
+
+@import "btn";
+@import "list";
+@import "form";
+@import "table";
+//form 
+
+.#{$prefix}-form {
+	@extend %formMobile;
+}

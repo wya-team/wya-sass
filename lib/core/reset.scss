@@ -114,6 +114,10 @@ body {
 	color: white;
 }
 
+[class*="g-bg-white"] {
+	color: inherit;
+}
+
 [class*="g-bg-"] input {
 	color: black;
 }
