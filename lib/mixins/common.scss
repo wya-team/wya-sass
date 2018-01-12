@@ -88,7 +88,7 @@
 				}
 			}
 		}
-	}else{
+	}@else {
 		$len: str_length($border);
 		@if ($len >= 4){
 			border: $width / $scale $border-type $color; 

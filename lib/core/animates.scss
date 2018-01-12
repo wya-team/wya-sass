@@ -45,3 +45,28 @@ $direction: down, up, left, right;
 @keyframes animate-zoomOut {
 	@include animateZoom(1, 0);
 }
+/**
+ * [$direction 方向]
+ * @type {[string]}
+ */
+$direction: down, up, left, right;
+@each $key in $direction {
+	@keyframes animate-slide-#{$key} {
+		$start: 0, 100%;
+		@if ($key == 'down') {
+			$start: 0, 100%;
+		} @else if ($key == 'up') {
+			$start: 0, -100%;
+		} @else if ($key == 'left') {
+			$start: -100%, 0;
+		} @else if ($key == 'right') {
+			$start: 100%, 0;
+		}
+		0% {
+			transform: translate(#{$start});
+		}
+		100% {
+			transform: translate(0, 0);
+		}
+	}
+}
