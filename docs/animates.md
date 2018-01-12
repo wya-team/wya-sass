@@ -9,7 +9,5 @@
 	@include animateSlide(left, 30%);
 }
 ```
-* animate-fadeIn
-* animate-fadeOut
-* animate-zoomIn
-* animate-zoomOut
+* `animateFade($start, $end)`
+* `animateZoom($start, $end)`

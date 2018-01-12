@@ -1,31 +1,42 @@
 /**
  * 通用表单
  */
-%formBaseMobile {
+@mixin mobileBtnBase($bgColor, $color: $white){
+	padding: 0;
+	margin: 0;
+	color: $color;
+	background: $bgColor;
+	justify-content: center;
+	line-height: 80px / $scale;
+	border-radius: 0px;
+	font-size: 26px / $scale;
 	width: 100%;
-	background: $form-bg-color;
+}
+@mixin mobileFormBase {
+	width: 100%;
+	background: $mobile-form-bg-color;
 	.__item {
 		display: flex;
 		align-items: center;
-		margin: 0 #{$form-item-margin / $scale};
-		line-height: #{$form-line-height / $scale};
+		margin: 0 #{$mobile-form-item-margin / $scale};
+		line-height: #{$mobile-form-line-height / $scale};
 		@include commonBorder(b);
 		&:last-child {
 			border-bottom: none;
 		}
 		input {
 			flex: 1;
-			color: $form-font-color;
+			color: $mobile-form-font-color;
 		}
 		label {
-			flex: 0 0 #{$form-label-width / $scale};
+			flex: 0 0 #{$mobile-form-label-width / $scale};
 		}
 	}
 	.__none {
 		margin: 0;
 	}
 	button {
-		@include btnBase($form-btn-color, $form-btn-color);
+		@include mobileBtnBase($mobile-form-btn-color, $mobile-form-btn-bg-color);
 	}
 }
 

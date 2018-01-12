@@ -1,0 +1,12 @@
+//table
+$pc-table-bar: #F0F2F7;
+$pc-table-border: #cdcdcd;
+$pc-table-bar: #F0F2F7;
+$pc-table-font-size: 14px;
+$pc-table-tr-height: 40px;
+$pc-table-line-height: 22px;
+$pc-table-hover: #cdcdcd;
+
+.#{$prefix}-table-pc {
+    @include pcTableBase();
+}

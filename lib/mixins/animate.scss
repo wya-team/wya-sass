@@ -55,49 +55,26 @@ $direction: down, up, left, right;
 	}
 }
 
-@keyframes animate-fadeIn {
+@mixin animateFade($start, $end){
 	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes animate-fadeOut {
-	0% {
-		opacity: 1;
+		opacity: $start;
 	}
 
 	100% {
-		opacity: 0;
+		opacity: $end;
 	}
 }
 
-@keyframes animate-zoomIn {
+@mixin animateZoom($start, $end) {
 	0% {
-		opacity: 0;
+		opacity: $start;
 		transform-origin: 50% 50%;
 		transform: scale(0, 0);
 	}
 
 	100% {
-		opacity: 1;
+		opacity: $end;
 		transform-origin: 50% 50%;
 		transform: scale(1, 1);
-	}
-}
-
-@keyframes animate-zoomOut {
-	0% {
-		opacity: 1;
-		transform-origin: 50% 50%;
-		transform: scale(1, 1);
-	}
-
-	100% {
-		opacity: 0;
-		transform-origin: 50% 50%;
-		transform: scale(0, 0);
 	}
 }
