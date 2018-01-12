@@ -1,5 +1,4 @@
 @import "color";
-
 // 定义默认属性
 // 缩放
 $scale: 1 !default;
@@ -36,7 +35,7 @@ $font-color-mid: $gray_2 !default;
 $font-color-light: $gray_3 !default;
 
 // 边框颜色
-$border-color: $gray_3 !default;
+$border-color: #cdcdcd !default;
 
 // 字体尺寸
 $font-size-base: 14px !default;

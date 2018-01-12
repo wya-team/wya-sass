@@ -40,7 +40,8 @@ npm install --save wya-sass
   - animate.scss 输出动画
   - flex.scss 输出flex布局
   - layout.scss 输出全局变量
-  - module 模块样式
+  - pc pc模块样式
+  - mobile 手机模块样式
 
 ### <h3 id="3">命名规范</h3>
 * 全局命名以 `g-` 开头
@@ -252,6 +253,13 @@ npm install --save wya-sass
 | class  | 备注  |
 |:-------------|:---------------| 
 |.g-h-full| height: 100vh; |
+|.g-br-circle| border-radius: 100%; |
+|.g-br-sem| 默认圆角 (8px) |
+|.g-bs| 边框阴影|
+|.g-disabled| 禁用事件 |
+|.g-noanimate| 禁用动画|
+|.g-show| 显示|
+|.g-hide| 隐藏|
 
 
 *  <h5 id="5.7"> 5.7动画 </h5>

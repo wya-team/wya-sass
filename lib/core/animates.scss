@@ -30,3 +30,18 @@ $direction: down, up, left, right;
 		animation-timing-function: $modal-timing;
 	}
 }
+@keyframes animate-fadeIn {
+	@include animateFade(0, 1);
+}
+
+@keyframes animate-fadeOut {
+	@include animateFade(1, 0);
+}
+
+@keyframes animate-zoomIn {
+	@include animateZoom(0, 1);
+}
+
+@keyframes animate-zoomOut {
+	@include animateZoom(1, 0);
+}

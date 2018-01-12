@@ -1,0 +1,12 @@
+// form
+$mobile-form-bg-color: #fff;
+$mobile-form-label-width: 160px;
+$mobile-form-font-color: #666;
+$mobile-form-btn-bg-color: $orange_1;
+$mobile-form-btn-color: #fff;
+$mobile-form-item-margin: 20px;
+$mobile-form-line-height: 80px;
+
+.#{$prefix}m-form {
+	@include mobileFormBase;
+}

@@ -1,0 +1,36 @@
+// btn
+$pc-btn-height: 34px;
+$pc-btn-font-size: 14px;
+$pc-btn-radius: 4px;
+$pc-btn-pd-lr: 20px;
+.#{$prefix}p-btn-lgr-blue {
+    @include pcBtnGradientBase(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
+}
+.#{$prefix}p-btn-blue {
+    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+}
+.#{$prefix}p-btn-yellow {
+    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+}
+.#{$prefix}p-btn-line {
+    @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
+}
+
+// tip 
+$pc-btn-height: 20px;
+$pc-btn-font-size: 12px;
+$pc-btn-radius: 4px;
+$pc-btn-pd-lr: 10px;
+.#{$prefix}p-tip-lgr-blue {
+    @include pcBtnGradientBase(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
+}
+.#{$prefix}p-tip-blue {
+    @include pcBtnBase($blue, darken($blue, 3%), $white);
+}
+.#{$prefix}p-tip-yellow {
+    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+}
+.#{$prefix}p-tip-line {
+    @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
+}
+
