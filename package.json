@@ -1,8 +1,8 @@
 {
 	"name": "wya-sass",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"description": "A modern alternative to Sass",
-	"main": "dist/index.css",
+	"main": "",
 	"files": [
 		"lib/**",
 		"dist/**",
