@@ -40,7 +40,9 @@ gulp.task("styles", function() {
 			cascade: true,
 			remove: true
 		}))
-		.pipe(plugins.minifyCss())
+		.pipe(plugins.minifyCss({
+			 advanced: false
+		}))
 		.pipe(gulp.dest(paths.distCss));
 });
 
