@@ -7,6 +7,10 @@ $pc-table-tr-height: 40px;
 $pc-table-line-height: 22px;
 $pc-table-hover: #cdcdcd;
 
-.#{$prefix}-table-pc {
+.#{$prefix}p-table {
     @include pcTableBase();
+    &.__no-padding{
+		padding: 0;
+    }
 }
+

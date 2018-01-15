@@ -64,6 +64,14 @@ body {
 	font-style: normal;
 	display: inline-block;
 }
+.g-reset button {
+	outline-style: none;
+}
+.g-reset input, 
+.g-reset textarea,
+{
+	outline: none; 
+}
 
 /**
  * scrollbar width

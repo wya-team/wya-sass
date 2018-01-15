@@ -9,6 +9,9 @@ $pc-btn-pd-lr: 20px;
 .#{$prefix}p-btn-blue {
     @include pcBtnBase($blue, darken($blue, 3%), $white);
 }
+.#{$prefix}p-btn-blue-3 {
+    @include pcBtnBase($blue_3, darken($blue_3, 3%), $white);
+}
 .#{$prefix}p-btn-yellow {
     @include pcBtnBase($yellow, darken($yellow, 3%), $font-color-dark);
 }
