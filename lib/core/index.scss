@@ -6,11 +6,7 @@
 
 
 // 基础样式
-@import "reset";
-@import "global";
-@import "flex";
-@import "layout";
-@import "animates";
+@import "basic/index";
 
 // 全部样式
 @import "mobile/index";
