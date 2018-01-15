@@ -10,7 +10,7 @@ $pc-btn-pd-lr: 20px;
     @include pcBtnBase($yellow, darken($yellow, 3%), $white);
 }
 .#{$prefix}p-btn-yellow {
-    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+    @include pcBtnBase($yellow, darken($yellow, 3%), $font-color-dark);
 }
 .#{$prefix}p-btn-line {
     @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
@@ -28,7 +28,7 @@ $pc-btn-pd-lr: 10px;
     @include pcBtnBase($blue, darken($blue, 3%), $white);
 }
 .#{$prefix}p-tip-yellow {
-    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+    @include pcBtnBase($yellow, darken($yellow, 3%), $font-color-dark);
 }
 .#{$prefix}p-tip-line {
     @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
