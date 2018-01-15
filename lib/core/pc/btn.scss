@@ -7,7 +7,7 @@ $pc-btn-pd-lr: 20px;
     @include pcBtnGradientBase(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
 }
 .#{$prefix}p-btn-blue {
-    @include pcBtnBase($yellow, darken($yellow, 3%), $white);
+    @include pcBtnBase($blue, darken($blue, 3%), $white);
 }
 .#{$prefix}p-btn-yellow {
     @include pcBtnBase($yellow, darken($yellow, 3%), $font-color-dark);
