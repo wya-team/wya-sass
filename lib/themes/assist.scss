@@ -72,7 +72,9 @@ $padding-list: ('', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('3
 		('tb', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ), 
 		('lr', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ),
 		('t', ('5':$padding-xs) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
-		('l', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)) 
+		('l', ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
+		('r', ('5':$margin-xs) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
+		('b', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)) 
 		!default;
 @if $padding-list-add {
 	$padding-list: join($padding-list, $padding-list-add);
@@ -84,7 +86,9 @@ $margin-list: ('', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg)),
 		('tb', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ), 
 		('lr', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ),
 		('t', ('5':$margin-xs) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
-		('l', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)) 
+		('l', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
+		('r', ('5':$margin-xs) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
+		('b', ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl))
 		!default;
 @if $margin-list-add {
 	$margin-list: join($margin-list, $margin-list-add);
