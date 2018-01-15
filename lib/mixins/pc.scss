@@ -97,13 +97,15 @@
 /**
  * 通用表格
  */
-@mixin pcTableBase($text-align: left) {
+@mixin pcTableBase($text-align: left, $padding: 20px, $radius: 4px) {
 	overflow-x: auto;
     background: $white;
-    background: $white;
+    position: relative;
+    padding: $padding / $scale;
     border-collapse: collapse;
     width: 100%;
     text-align: $text-align;
+    border-radius: $radius / $scale;
     thead {
         th {
             background: $pc-table-bar;
