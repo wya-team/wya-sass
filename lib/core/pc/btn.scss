@@ -16,14 +16,15 @@ $pc-btn-pd-lr: 20px;
     @include pcBtnBase($yellow, darken($yellow, 3%), $font-color-dark);
 }
 .#{$prefix}p-btn-line {
-    @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
+    @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark, $white);
 }
+
 
 // tip 
 $pc-btn-height: 20px;
 $pc-btn-font-size: 12px;
-$pc-btn-radius: 4px;
-$pc-btn-pd-lr: 10px;
+$pc-btn-radius: 2px;
+$pc-btn-pd-lr: 5px;
 .#{$prefix}p-tip-lgr-blue {
     @include pcBtnGradientBase(to right, $blue_1, $blue_2, darken($blue_1, 3%), darken($blue_2, 3%), $white);
 }
@@ -36,4 +37,5 @@ $pc-btn-pd-lr: 10px;
 .#{$prefix}p-tip-line {
     @include pcBtnLineBase(to right, $white, $blue_1, $blue_2, $font-color-dark);
 }
+
 

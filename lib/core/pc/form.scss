@@ -1,6 +1,5 @@
 // form
 $pc-form-bg-color: #fff;
-$pc-form-label-width: 160px;
 $pc-form-font-color: #666;
 $pc-form-btn-bg-color: $orange_1;
 $pc-form-btn-color: #fff;
@@ -9,6 +8,11 @@ $pc-form-line-height: 34px;
 $pc-form-input-Width: 220px;
 $pc-form-input-pad: 12px;
 $pc-form-unit: 16px;
+$pc-form-radius: 4px;
+$pc-form-min-height: 20px;
+$pc-form-label-width:28%;
+$pc-form-head-bg:#f0f1f8;
+$pc-form-head-height: 40px;
 %unitBase {
     appearance: none;
     -webkit-appearance: none;
@@ -22,7 +26,8 @@ $pc-form-unit: 16px;
 	& input[type="text"],
     & input[type="password"],
     & input[type="number"]{
-		@include commonBorder('lbtr');
+		border: 1px solid $border-color;
+        border-radius: $pc-form-radius / $scale;
 		box-sizing: border-box;
         display: inline-block;
         height: $pc-form-line-height / $scale;
@@ -35,12 +40,12 @@ $pc-form-unit: 16px;
             border-color: $blue;
             box-shadow: 0 0 3px / $scale 0 $blue;
         }
-        &.disabled {
+        &.__disabled {
             background: $disable-bg-color;
         }
         $sizelis:4,6,8;
         @for $i from 1 through length($sizelis) {
-            &.size#{nth($sizelis, $i)} {
+            &.__size#{nth($sizelis, $i)} {
                 min-width: 0;
                 width:#{nth($sizelis, $i)}em;
             }
@@ -77,7 +82,7 @@ $pc-form-unit: 16px;
             -webkit-text-stroke-width: .2px;
             -moz-osx-font-smoothing: grayscale;
         }
-        &.choose {
+        &.__Schoose {
             width: $pc-form-unit / $scale;
             height: $pc-form-unit / $scale;
             color: $blue;
@@ -102,8 +107,8 @@ $pc-form-unit: 16px;
             content: "";
             position: absolute;
             color: $font-color-dark;
-            width: ($pc-form-unit - 2) / $scale;
-            height: ($pc-form-unit - 2) / $scale;
+            width: $pc-form-unit / $scale;
+            height: $pc-form-unit / $scale;
             border-radius: 50%;
             background: $white;
             border: 1px solid $blue;
@@ -121,6 +126,89 @@ $pc-form-unit: 16px;
             left: 0;
             right: 0;
             margin: auto;
+        }
+    }
+    label+label {
+        margin-left: 20px / $scale;
+    }
+    .__head {
+        height: $pc-form-head-height;
+        background: $pc-form-head-bg;
+        color: $red;
+        line-height: $pc-form-head-height;
+        font-size: $pc-form-unit;
+        &:before {
+            content: '';
+            margin: 0 10px / $scale 0 16px / $scale;
+            border-right: 2px solid $red;
+        }
+    }
+    .__content {
+        @extend .g-clearfix;
+        .__line {
+            @extend .g-clearfix;
+            min-height: $pc-form-min-height / $scale;
+            position: relative;
+            width: 100%;
+            margin: $pc-form-item-margin / $scale 0;
+            & > label {
+                text-overflow:ellipsis;
+                overflow:hidden;
+                white-space:nowrap;
+                position: absolute;
+                width: $pc-form-label-width / 2;
+                left: 0;
+                top: 0;
+                text-align: right;
+                line-height: $pc-form-line-height;
+                .__require {
+                    color: $red;
+                    margin-right: 5px / $scale;
+                }
+            }
+            & > div {
+                margin-left: $pc-form-label-width / 2;
+                padding-left: 10px / $scale;
+                .__tip,
+                .__tip-warn {
+                    display: block;
+                    padding: 8px / $scale 0 0;
+                    color: $font-color-light;
+                    font-size: 12px / $scale;
+                }
+                .__tip-warn {
+                    color: $red;
+                }
+                .__hint {
+                    @extend .__tip;
+                    display: inline;
+                    position: static;
+                    border: none;
+                    box-shadow: none;
+                    margin: 0;
+                }
+                label {
+                    margin-right: 10px / $scale;
+                }
+            }
+            &.__text {
+                &>label {
+                    line-height: normal;
+                }
+                &>div {}
+            }
+        }
+        .__left {
+            @extend .g-fl;
+            width: 50%;
+            .__line {
+                &>label {
+                    width: $pc-form-label-width;
+                }
+                &>div {
+                    margin-left: $pc-form-label-width;
+                }
+            }
         }
     }
 }

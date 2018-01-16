@@ -53,7 +53,8 @@
     box-sizing: border-box;
     cursor: pointer;
     font-size: $pc-btn-font-size / $scale;
-    @include commonBorder();
+    border-radius: $pc-btn-radius / $scale;
+    border: 1px solid $border-color;
     &:hover {
         @include commonBgLinear($gradient, $hoverBgStart, $hoverBgEnd);
         color: $hoverColor;
