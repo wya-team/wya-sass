@@ -92,7 +92,7 @@
 		$len: str_length($border);
 		@if ($len >= 4){
 			border: $width / $scale $border-type $color; 
-		}else{
+		}@else{
 			@each $key in $border {			
 				@while $len > 0 {
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {

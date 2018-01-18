@@ -156,7 +156,7 @@ $pc-form-head-height: 40px;
                 overflow:hidden;
                 white-space:nowrap;
                 position: absolute;
-                width: $pc-form-label-width / 2;
+                width: $pc-form-label-width;
                 left: 0;
                 top: 0;
                 text-align: right;
@@ -167,7 +167,7 @@ $pc-form-head-height: 40px;
                 }
             }
             & > div {
-                margin-left: $pc-form-label-width / 2;
+                margin-left: $pc-form-label-width;
                 padding-left: 10px / $scale;
                 .__tip,
                 .__tip-warn {

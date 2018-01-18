@@ -2,15 +2,31 @@
  * 通用表单
  */
 @mixin mobileBtnBase($bgColor, $color: $white){
-	padding: 0;
-	margin: 0;
 	color: $color;
 	background: $bgColor;
 	justify-content: center;
-	line-height: 80px / $scale;
-	border-radius: 0px;
-	font-size: 26px / $scale;
-	width: 100%;
+	line-height: $mobile-btn-height / $scale;
+	border-radius: $mobile-btn-height / 2 / $scale;
+	font-size: $mobile-btn-font-size / $scale;
+	display: block;
+	margin: auto;
+	padding: $mobile-btn-pd-lr / $scale;
+	border-radius: $mobile-btn-radius / $scale;
+	text-align: center;
+}
+
+@mixin mobileBtnGradientBase($gradient, $bgColorStart, $bgColorEnd, $color: $white){
+	color: $color;
+	justify-content: center;
+	line-height: $mobile-btn-height / $scale;
+	border-radius: $mobile-btn-height / 2 / $scale;
+	font-size: $mobile-btn-font-size / $scale;
+	display: block;
+	margin: auto;
+	padding: $mobile-btn-pd-lr / $scale;
+	border-radius: $mobile-btn-radius / $scale;
+    @include commonBgLinear($gradient, $bgColorStart, $bgColorEnd);
+	text-align: center;
 }
 @mixin mobileFormBase {
 	width: 100%;
@@ -27,6 +43,7 @@
 		input {
 			flex: 1;
 			color: $mobile-form-font-color;
+			border: 1px solid $border-color;
 		}
 		label {
 			flex: 0 0 #{$mobile-form-label-width / $scale};

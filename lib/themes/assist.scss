@@ -5,21 +5,21 @@
 
 // 常用字体大小
 $font-size-list-add: false !default;
-$font-size-list: 12, 14, 16, 18, 26, 28, 30, 32, 36, 50, 60, 90, 100  !default;
+$font-size-list: 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 50, 60, 90, 100  !default;
 @if $font-size-list-add {
 	$font-size-list: join($font-size-list, $font-size-list-add);
 }
 
 // 常用行高
 $line-height-list-add: false !default;
-$line-height-list: 44, 60, 72, 80, 88, 120 !default;
+$line-height-list: 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 60, 72, 80, 88, 120 !default;
 @if $line-height-list-add {
 	$line-height-list: join($line-height-list, $line-height-list-add);
 }
 
 // 常用图片大小
 $img-size-list-add: false !default;
-$img-size-list: 40, 60, 80, 100, 120, 140, 160 !default;
+$img-size-list: 40, 46, 50, 60, 70, 76, 80, 100, 120, 140, 160 !default;
 @if $img-size-list-add {
 	$img-size-list: join($img-size-list, $img-size-list-add);
 }
@@ -53,6 +53,7 @@ $bg-color-list: ('red', $main-color-1),
 		('dark', $font-color-dark),
 		('mid', $font-color-mid), 
 		('light', $font-color-light, $red),
+		('tip', $gray_5, $red),
 		('white', $white, 'inherit')
 		!default;
 @if $bg-color-list-add {
