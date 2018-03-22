@@ -17,15 +17,19 @@
 	<button class="gp-btn-lgr-blue">按钮1</button>
 	<button class="gp-tip-blue">按钮1</button>
 	<button class="gp-tip-yellow">按钮1</button>
-	<button class="gm-btn-blue">按钮1</button>
-	<button class="gm-btn-lgr-blue">按钮1</button>
+	<!--<button class="gm-btn-blue">按钮1</button>
+	<button class="gm-btn-lgr-blue">按钮1</button>-->
 	<div class="g-bg-tip">ssss</div>
 	<div class="gp-form">
 		<div class="__head">sss</div>
 		<div class="__content">
 			<div class="__line">
 				<label>姓名</label>
-				<div><input type="text" name=""></div>
+				<div><input type="text" name="" ></div>
+			</div>
+			<div class="__line">
+				<label>ddd</label>
+				<div><input type="text" name="" disabled></div>
 			</div>
 			<div class="__line __text">
 				<label>复选</label>
@@ -34,8 +38,14 @@
 					<label><input type="checkbox" name="">复选</label>
 					<label><input type="checkbox" name="">复选</label>
 					<label><input type="checkbox" name="">复选</label>
-					<label><input type="checkbox" name="">复选</label>
-					<label><input type="checkbox" name="">复选</label>
+					<label><input type="checkbox" name="" class="__disabled">复选</label>
+				</div>
+			</div>
+			<div class="__line __text">
+				<label>开关</label>
+				<div>
+					<input type="checkbox" class="__btn-switch" />
+					<input type="checkbox" class="__btn-switch __sm" />
 				</div>
 			</div>
 			<div class="__line __text">
@@ -47,29 +57,31 @@
 			</div>
 		</div>
 	</div>
-	<table class="gp-table">
-		<thead>
-			<tr>
-				<th>col</th>
-				<th>col</th>
-				<th>col</th>
-				<th>col</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>row</td>
-				<td>row</td>
-				<td>row</td>
-				<td>row</td>
-			</tr>
-			<tr>
-				<td>row</td>
-				<td>row</td>
-				<td>row</td>
-				<td>row</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="g-pd-30">
+		<table class="gp-table" >
+			<thead>
+				<tr>
+					<th>col</th>
+					<th>col</th>
+					<th>col</th>
+					<th>col</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>row</td>
+					<td>row</td>
+					<td>row</td>
+					<td>row</td>
+				</tr>
+				<tr>
+					<td>row</td>
+					<td>row</td>
+					<td>row</td>
+					<td>row</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>

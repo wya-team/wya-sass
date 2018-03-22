@@ -1,41 +1,47 @@
 /**
  * layout 定义全局样式
  */
+
 /**
  *  定义栅格布局 12等分
  *  return g-w-value, g-fw-value 浮动
  */
 
-
 @include globalLayout($total);
+
 /**
  *  定义全局需要的 color(lists)
  *  (name:名称, value:值)
  *  return g-c-pink
  */
 @include globalColor($color-list);
+
 /**
  *  定义全局需要的 bgColor
  *  (name:名称, value:值, color:字体颜色，默认白色)
  *  return g-bg-pink
  */
 @include globalBgColor($bg-color-list);
+
 /**
  *  定义全局需要的 bgLineColor
  *  (name:名称, value:值, color:字体颜色，默认白色)
  *  return g-bg-lg-pink
  */
 @include globalBgLineColor($bg-line-color-list);
+
 /**
  *  定义全局需要的font-size(lists)
  *  return g-fs-12
  */
 @include globalFontSize($font-size-list);
+
 /**
  *  定义全局需要的line-height(lists)
  *  return g-lh-44
  */
 @include globalLineHeight($line-height-list);
+
 /**
  *  定义全局需要的padding(lists)
  *  > string(定义方向 t(top), b(bottom), l(left), r(right))
@@ -43,6 +49,7 @@
  *  return g-pd-15 / g-pd-sm / g-pd-tb-10
  */
 @include globalPadding($padding-list);
+
 /**
  *  定义全局需要的margin(lists)
  *  > string(定义方向 t(top), b(bottom), l(left), r(right))
@@ -50,6 +57,7 @@
  *  return g-m-15 / g-m-tb-10em
  */
 @include globalMargin($margin-list);
+
 /**
  *  定义全局需要的img大小(lists)
  *  return g-img-60
@@ -62,7 +70,9 @@
 .#{$prefix}-br-sem {
 	border-radius: $default-border-radius / $scale;
 }
-
+.#{$prefix}-b {
+	@include commonBorder(brtl);
+}
 .#{$prefix}-bb {
 	@include commonBorder(b);
 }
@@ -111,18 +121,16 @@
 	@include commonNoBreak;
 }
 
-
 .#{$prefix}-fixed {
 	position: fixed !important;
 }
 .#{$prefix}-relative {
-	position: relative!important;
+	position: relative !important;
 }
 
 .#{$prefix}-absolute {
-	position: absolute!important;
+	position: absolute !important;
 }
-
 
 .#{$prefix}-clearfix:before,
 .#{$prefix}-clearfix:after,
@@ -146,9 +154,8 @@
 	float: left;
 }
 
-
 .#{$prefix}-h-full {
-	height: 100vh
+	height: 100vh;
 }
 
 /**
@@ -157,6 +164,7 @@
 .#{$prefix}-disabled {
 	pointer-events: none;
 }
+
 /**
  * 禁用动画
  */
@@ -164,18 +172,21 @@
 	animation: 0 !important;
 	-webkit-animation: 0 !important;
 }
+
 /**
  * 一行文字
  */
 .#{$prefix}-oneline {
 	@include commonTextLine(1);
 }
+
 /**
  * 两行文字
  */
 .#{$prefix}-twoline {
 	@include commonTextLine(2);
 }
+
 /**
  * 两行文字 限高
  */
@@ -183,6 +194,7 @@
 	height: $line-height-limit * 2 / $scale;
 	line-height: $line-height-limit * 2 / $scale;
 }
+
 /**
  * 一行文字 限高
  */
@@ -191,8 +203,8 @@
 	line-height: $line-height-limit / $scale;
 }
 
-.#{$prefix}-hide {
-	display: hidden;
+.#{$prefix}-none {
+	display: none;
 }
 .#{$prefix}-show {
 	display: block;

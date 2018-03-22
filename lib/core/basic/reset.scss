@@ -20,11 +20,13 @@ body {
 	border: none;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
 	/**
 	 * 字体样式不模糊
 	 */
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+
 	/**
 	 * 可以复制粘帖
 	 */
@@ -36,41 +38,31 @@ body {
  * g-reset
  * 用户初始化元素的类
  */
-.g-reset ol,
-.g-reset ul,
-.g-reset li {
-	list-style: none;
-}
-
-.g-reset a {
-	text-decoration: none;
-	color: inherit;
-}
-
-.g-reset img {
-	vertical-align: middle;
-	max-width: 100%;
-}
-
-.g-reset .inline {
-	display: inline
-}
-
-.g-reset i,
-.g-reset b,
-.g-reset em,
-.g-reset span {
-	font-weight: normal;
-	font-style: normal;
-	display: inline-block;
-}
-.g-reset button {
-	outline-style: none;
-}
-.g-reset input, 
-.g-reset textarea,
-{
-	outline: none; 
+body, .g-reset {
+	ol, ul, li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	img {
+		vertical-align: middle;
+		max-width: 100%;
+	}
+	.inline {
+		display: inline;
+	}
+	i, b, em, span {
+		font-weight: normal;
+		font-style: normal;
+	}
+	input, textarea {
+		outline: none;
+	} 
+	button {
+		outline-style: none;
+	}
 }
 
 /**
@@ -106,13 +98,14 @@ body {
 #pages,
 [class*="scroll-wrap-content"] {
 	overflow: auto;
+	height: 100%;
 }
 
-[class*="scroll-container"]  {
+[class*="scroll-container"] {
 	-webkit-overflow-scrolling: touch;
 	overflow-scrolling: touch;
 	overflow: auto;
-	&.__none{
+	&.__none {
 		-webkit-overflow-scrolling: auto;
 		overflow-scrolling: auto;
 	}

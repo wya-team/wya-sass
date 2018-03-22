@@ -196,7 +196,8 @@
 |.g-disabled| 禁用事件 |
 |.g-noanimate| 禁用动画|
 |.g-show| 显示|
-|.g-hide| 隐藏|
+|.g-none| 隐藏|
+|.g-pointer| 鼠标形状|
 
 
 *  动画 

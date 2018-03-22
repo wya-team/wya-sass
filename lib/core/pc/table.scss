@@ -1,16 +1,30 @@
 //table
-$pc-table-bar: #F0F2F7;
+$pc-table-bar: #f0f2f7;
 $pc-table-border: #cdcdcd;
-$pc-table-bar: #F0F2F7;
+$pc-table-bar: #f0f2f7;
 $pc-table-font-size: 14px;
 $pc-table-tr-height: 40px;
 $pc-table-line-height: 22px;
 $pc-table-hover: #cdcdcd;
 
 .#{$prefix}p-table {
-    @include pcTableBase();
-    &.__no-padding{
-		padding: 0;
-    }
+	@include pcTableBase();
+	&.__no-padding {
+		th, td {
+			padding: 0;
+		}
+	}
+	&.__border {
+		border: 1px solid $pc-table-border;
+		td {
+			border: 1px solid $pc-table-border;
+		}
+	}
+	&.__center {
+		text-align: center;
+	}
+	&.__right {
+		text-align: right;
+	}
 }
 

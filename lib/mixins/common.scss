@@ -61,8 +61,9 @@
  * @param  {[string]} $border: ltbr          [border的方向缩写拼接]
  * @return {[type]}          [1px border]
  */
-@mixin commonBorder($border: ltbr, $color: $border-color, $width: 1, $border-type: solid ) {
-	@if ($width == 1) {
+@mixin commonBorder($border: ltbr, $color: $border-color, $width: 1px, $border-type: solid ) {
+
+	@if ($scale > 1) {
 		position: relative;
 		border: none;
 		transform: translateZ(0);
@@ -80,20 +81,22 @@
 			z-index: -1;
 			@each $key in $border {
 				$len: str_length($border);
+
 				@while $len > 0 {
+					
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {
-						border-#{commonDirectionFill(str_slice($border, $len, $len))}: 1px $border-type $color;
+						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width $border-type $color;
 					}
 					$len: $len - 1;
 				}
 			}
 		}
-	}@else {
+	} @else {
 		$len: str_length($border);
-		@if ($len >= 4){
-			border: $width / $scale $border-type $color; 
-		}@else{
-			@each $key in $border {			
+		@if ($len > 3) {
+			border: $width / $scale $border-type $color;
+		} @else {
+			@each $key  in $border {
 				@while $len > 0 {
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {
 						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width / $scale $border-type $color;
@@ -104,6 +107,7 @@
 		}
 		
 	}
+	
 	
 }
 
@@ -196,6 +200,7 @@
 /**
  * 文字相关
  */
+
 /**
  * 一行文字
  */
@@ -240,4 +245,89 @@
 	}
 }
 
+@mixin commonScroll($size: 4px) {
+	/**
+	 * scrollbar width
+	 */
+	&::-webkit-scrollbar {
+		width: $size; // 很有影响
+	}
 
+	::-webkit-scrollbar:horizontal {
+		height: $size;
+	}
+
+	/**
+	 * scrollbar bg
+	 */
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0);
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		background: rgba(0, 0, 0, 0);
+	}
+
+	/**
+	 * Handle
+	 */
+	&::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		background: rgba(0, 0, 0, 0.2);
+	}
+}
+
+@mixin commonPopup($container-height: 650px, $container-width: 1010px, $content-height: 600px, $white: white) {
+	@include commonScroll();
+	@include commonFlexCc();
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	.__mask {
+		position: absolute;
+		z-index: 997;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, 0.1);
+		opacity: 0;
+		transition: opacity 0.2s;
+	}
+	.__container {
+		height: $container-height;
+		width: $container-width;
+		background: $white;
+		position: absolute;
+		z-index: 998;
+		top: 50%;
+		left: 50%;
+		border-radius: 3px;
+		box-shadow: 0 15px 30px rgba(#000, 0.1);
+		opacity: 0;
+		transform: translate(-50%, -50%);
+		transition: transform 0.2s, opacity 0.2s;
+	}
+	&.__active {
+		.__mask {
+			opacity: 1;
+		}
+		.__container {
+			opacity: 1;
+			transform: translate(-50%, -60%);
+		}
+	}
+	.__header {
+		@include commonFlex();
+		justify-content: space-between;
+		align-items: center;
+		// background: $white;
+		padding: 10px 20px;
+		flex: 1;
+		border-bottom: $border;
+		height: $container-height - $content-height; // margin-bottom: 10px
+	}
+}
