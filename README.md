@@ -147,18 +147,18 @@ npm install --save wya-sass
 
 | class  | 备注  |
 |:-------------|:---------------| 
-|.g-c-pink ||
-|.g-c-pink-1 ||
-|.g-c-deep ||
+|.g-c-blue-dark ||
+|.g-c-blue-mid ||
+|.g-c-blue-light ||
 | ...| |
 
 > bgColor g-bg-(颜色／变量)
 
 | class  | 备注  |
 |:-------------|:---------------|
-|.g-bg-pink ||
-|.g-bg-pink-1 ||
-|.g-bg-deep ||
+|.g-bg-blue-dark ||
+|.g-bg-blue-mid ||
+|.g-bg-blue-light ||
 | ...| |
 > padding g-pd-(方向)?-(值/变量) 
 

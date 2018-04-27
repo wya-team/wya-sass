@@ -3,9 +3,9 @@ $mobile-btn-height: 88px;
 $mobile-btn-font-size: 26px;
 $mobile-btn-radius: 44px;
 $mobile-btn-pd-lr: 20px;
-.#{$prefix}m-btn-blue{
-	@include mobileBtnBase($blue);
+.#{$prefix}m-btn-blue {
+	@include mobileBtnBase($blue_mid);
 }
-.#{$prefix}m-btn-lgr-blue{
-	@include mobileBtnGradientBase(to right, $blue_2, $blue_1);
+.#{$prefix}m-btn-lgr-blue {
+	@include mobileBtnGradientBase(to right, $blue_mid, $blue_dark);
 }

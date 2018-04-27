@@ -26,17 +26,28 @@ $img-size-list: 40, 46, 50, 60, 70, 76, 80, 100, 120, 140, 160 !default;
 
 // 常用颜色
 $color-list-add: false !default;
-$color-list: ('red', $main-color-1), 
-	('blue', $main-color-2),
-	('yellow', $main-color-3), 
-	('blue-1', $blue_1), 
-	('blue-2', $blue_2),
-	('deep', $font-color-deep), 
-	('gray-1', $gray-1),
-	('gray-2', $gray-2), 
-	('gray-3', $gray-3),
-	('gray-4', $gray-4),
-	('gray-5', $gray-5),
+$color-list: ('red-mid', $red_mid),
+	('pink-mid', $pink_mid),
+	('pink-light', $pink_light), 
+	('blue-dark', $blue_dark),
+	('blue-mid', $blue_mid),
+	('blue-light', $blue_light),
+	('yellow-dark', $yellow_dark), 
+	('yellow-mid', $yellow_mid), 
+	('yellow-light', $yellow_light), 
+	('orange-dark', $orange_dark), 
+	('orange-mid', $orange_mid), 
+	('orange-light', $orange_light), 
+	('gray-dark', $gray_dark), 
+	('gray-mid', $gray_mid), 
+	('gray-light', $gray_light), 
+	('black-dark', $black_dark), 
+	('black-mid', $black_mid), 
+	('black-light', $black_light), 
+	('purple-dark', $purple_dark), 
+	('purple-mid', $purple_mid), 
+	('purple-light', $purple_light), 
+	('black', $black), 
 	('white', $white) !default;
 @if $color-list-add {
 	$color-list: join($color-list, $color-list-add);
@@ -44,26 +55,36 @@ $color-list: ('red', $main-color-1),
 
 // 常用背景颜色
 $bg-color-list-add: false !default;
-$bg-color-list: ('red', $main-color-1), 
-	('blue', $main-color-2),
-	('yellow', $main-color-3), 
-	('blue-1', $blue_1), 
-	('blue-2', $blue_2),
-	('blue-3', $blue_3),
-	('deep', $font-color-deep), 
-	('gray-1', $gray-1),
-	('gray-2', $gray-2), 
-	('gray-3', $gray-3),
-	('gray-3', $gray-4),
-	('gray-4', $gray-5, $red),
-	('white', $white, 'inherit') !default;
+$bg-color-list: ('red-mid', $red_mid),
+	('pink-mid', $pink_mid),
+	('pink-light', $pink_light), 
+	('blue-dark', $blue_dark),
+	('blue-mid', $blue_mid),
+	('blue-light', $blue_light),
+	('yellow-dark', $yellow_dark), 
+	('yellow-mid', $yellow_mid), 
+	('yellow-light', $yellow_light), 
+	('orange-dark', $orange_dark), 
+	('orange-mid', $orange_mid), 
+	('orange-light', $orange_light), 
+	('gray-dark', $gray_dark), 
+	('gray-mid', $gray_mid), 
+	('gray-light', $gray_light), 
+	('black-dark', $black_dark), 
+	('black-mid', $black_mid), 
+	('black-light', $black_light), 
+	('purple-dark', $purple_dark), 
+	('purple-mid', $purple_mid), 
+	('purple-light', $purple_light), 
+	('black', $black), 
+	('white', $white) !default;
 @if $bg-color-list-add {
 	$bg-color-list: join($bg-color-list, $bg-color-list-add);
 }
 
 // 常用渐变背景颜色
 $bg-line-color-list-add: false !default;
-$bg-line-color-list: (to right, 'blue', $blue-1, $blue-2) !default;
+$bg-line-color-list: (to right, 'blue', $blue_mid, $blue_mid) !default;
 @if $bg-line-color-list-add {
 	$bg-line-color-list: join($bg-line-color-list, $bg-line-color-list-add);
 }

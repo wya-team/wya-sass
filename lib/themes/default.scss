@@ -16,14 +16,14 @@ $total: 12 !default;
 $module: 'pc';
 
 // 主要颜色
-$main-color-1: $red !default;
-$main-color-2: $blue !default;
-$main-color-3: $yellow !default;
+$main-color-1: $red_mid !default;
+$main-color-2: $blue_mid !default;
+$main-color-3: $yellow-mid !default;
 
 // 背景颜色
 $body-bg-color: #f5f6fa;
 $scrollbar-track-bg-color: rgba(0, 0, 0, 0) !default;
-$scrollbar-thumb-bg-color: rgba(0, 0, 0, .2) !default;
+$scrollbar-thumb-bg-color: rgba(0, 0, 0, 0.2) !default;
 $popup-bg-color: $white !default;
 $modal-bg-color: $white !default;
 $mask-bg-color: rgba(0, 0, 0, 0.4) !default;
@@ -31,9 +31,9 @@ $disable-bg-color: #eee;
 
 // 字体颜色
 $font-color-deep: $black !default;
-$font-color-dark: $gray_1 !default;
-$font-color-mid: $gray_2 !default;
-$font-color-light: $gray_3 !default;
+$font-color-dark: $black-dark !default;
+$font-color-mid: $black-mid !default;
+$font-color-light: $black-light !default;
 
 // 边框颜色
 $border-color: #cdcdcd !default;
@@ -93,5 +93,5 @@ $modal-timing: ease !default;
 $popup-timing: ease !default;
 
 // box-shadow
-$scrollbar-track-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0)!default;
-$default-border-shadow:0px -1px 9.9px 0.1px rgba(0, 0, 0, 0.05);
+$scrollbar-track-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0) !default;
+$default-border-shadow:0 -1px 9.9px 0.1px rgba(0, 0, 0, 0.05);

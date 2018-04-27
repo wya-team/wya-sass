@@ -1,32 +1,41 @@
-// 主要颜色
-$red: #ca1622;
+$red_mid: #ca1622;
 
-$pink: #fa5a6e;
-$pink_1: #fff2ea;
+$pink-mid: #fa5a6e;
+$pink-light: #fff2ea;
 
-$orange: #fe9053;
-$orange_1: #fe9053;
+// 橙色系列
+$orange_dark: #ef3528;
+$orange_mid: #fa6f60;
+$orange_light: #fc9780;
 
-$green: #56c16d;
-$green_1: #06bf04;
+$green_dark: #06bf04;
+$green_mid: #56c16d;
 
-$blue: #2e76ef;
-$blue_1: #16a3ff;
-$blue_2: #0b76fe;
-$blue_3: #4e4aff;
+// 蓝色系系
+$blue_dark: #3771f9;
+$blue_mid: #5c8dff;
+$blue_light: #6ab4ff;
 
-$yellow: #ffd31c;
+// 黄色系
+$yellow-dark: #ea8102;
+$yellow-mid: #faac5f;
+$yellow-light: #ffd082;
 
-$purple: #c851ea;
+// 紫色系
+$purple-dark: #8b61f3;
+$purple-mid: #a48efc;
+$purple-light: #cca3ff;
 
-$gray_1: #333;
-$gray_2: #666;
-$gray_3: #999;
-$gray_4: #fefefe;
-$gray_5: #f7f7f7;
+// 灰色系
+$gray_dark: #edeef0;
+$gray_mid: #f5f6f7;
+$gray-light: #f7f8fa;
 
+// 白色系
 $white: #fff;
+
+// 黑色系
 $black: #000;
-
-
-
+$black-dark: #2e3136;
+$black-mid: #636770;
+$black-light: #9c9fa6;
