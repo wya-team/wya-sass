@@ -203,7 +203,10 @@
 	line-height: $line-height-limit / $scale;
 }
 
-.#{$prefix}-none {
+/**
+ * display
+ */
+.#{$prefix}-none, .#{$prefix}-hide {
 	display: none;
 }
 .#{$prefix}-show {
@@ -216,6 +219,33 @@
 	display: inline-block;
 }
 
+/**
+ * cursor
+ */
 .#{$prefix}-pointer {
 	cursor: pointer;
+}
+
+/**
+ * divide 划分
+ */
+.g-divide {
+	margin: 0 8px;
+	display: inline-block;
+	height: 12px;
+	width: 1px;
+	vertical-align: middle;
+	position: relative;
+	box-sizing: border-box;
+	background: #ccc;
+}
+
+/**
+  * dot 圆点
+  */
+.g-dot {
+	width: 5px / $scale;
+	height: 5px / $scale;
+	border-radius: 50%;
+	display: block;
 }

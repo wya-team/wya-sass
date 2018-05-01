@@ -38,7 +38,7 @@ body {
  * g-reset
  * 用户初始化元素的类
  */
-body, .g-reset {
+.g-reset {
 	ol, ul, li {
 		list-style: none;
 	}
@@ -63,6 +63,70 @@ body, .g-reset {
 	button {
 		outline-style: none;
 	}
+}
+
+/**
+ * g-unset 避免富文本被其他第三方初始化
+ */
+.g-unset {
+	*,
+	*:before,
+	*:after {
+		margin: unset;
+		padding: unset;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: unset;
+		margin-bottom: unset;
+		color: unset;
+		font-weight: unset;
+	}
+	p {
+		margin-top: unset;
+		margin-bottom: unset;
+	}
+
+	li {
+		display: list-item;
+	}
+
+	ol {
+		display: block;
+		list-style-type: decimal;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 40px;
+	}
+
+	ul {
+		display: block;
+		list-style-type: disc;
+		margin-top: 1em;
+		margin-bottom: 1 em;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 40px;
+	}
+	// ol,
+	// ul,
+	// dl {
+	// 	margin-top: 0;
+	// 	margin-bottom: 1em;
+	// }
+	// ol ol,
+	// ul ul,
+	// ol ul,
+	// ul ol {
+	// 	margin-bottom: 0;
+	// }
 }
 
 /**
