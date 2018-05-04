@@ -3,3 +3,6 @@
 	font-size: 14px / $scale;
 	cursor: pointer;
 }
+.g-disabled {
+	pointer-events: none;
+}
