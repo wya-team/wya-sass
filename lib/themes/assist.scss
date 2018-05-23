@@ -26,28 +26,28 @@ $img-size-list: 40, 46, 50, 60, 70, 76, 80, 100, 120, 140, 160 !default;
 
 // 常用颜色
 $color-list-add: false !default;
-$color-list: ('red-mid', $red_mid),
+$color-list: ('red-mid', $red-mid),
 	('pink-mid', $pink_mid),
-	('pink-light', $pink_light), 
-	('blue-dark', $blue_dark),
-	('blue-mid', $blue_mid),
-	('blue-light', $blue_light),
-	('yellow-dark', $yellow_dark), 
-	('yellow-mid', $yellow_mid), 
-	('yellow-light', $yellow_light), 
-	('orange-dark', $orange_dark), 
-	('orange-mid', $orange_mid), 
-	('orange-light', $orange_light), 
-	('gray-dark', $gray_dark), 
-	('gray-mid', $gray_mid), 
-	('gray-light', $gray_light), 
-	('black-dark', $black_dark), 
-	('black-mid', $black_mid), 
-	('black-light', $black_light), 
-	('purple-dark', $purple_dark), 
-	('purple-mid', $purple_mid), 
-	('purple-light', $purple_light), 
-	('black', $black), 
+	('pink-light', $pink_light),
+	('blue-dark', $blue-dark),
+	('blue-mid', $blue-mid),
+	('blue-light', $blue-light),
+	('yellow-dark', $yellow_dark),
+	('yellow-mid', $yellow_mid),
+	('yellow-light', $yellow_light),
+	('orange-dark', $orange-dark),
+	('orange-mid', $orange-mid),
+	('orange-light', $orange-light),
+	('gray-dark', $gray-dark),
+	('gray-mid', $gray-mid),
+	('gray-light', $gray-light),
+	('black-dark', $black_dark),
+	('black-mid', $black_mid),
+	('black-light', $black_light),
+	('purple-dark', $purple_dark),
+	('purple-mid', $purple_mid),
+	('purple-light', $purple_light),
+	('black', $black),
 	('white', $white) !default;
 @if $color-list-add {
 	$color-list: join($color-list, $color-list-add);
@@ -55,28 +55,28 @@ $color-list: ('red-mid', $red_mid),
 
 // 常用背景颜色
 $bg-color-list-add: false !default;
-$bg-color-list: ('red-mid', $red_mid),
+$bg-color-list: ('red-mid', $red-mid),
 	('pink-mid', $pink_mid),
-	('pink-light', $pink_light), 
-	('blue-dark', $blue_dark),
-	('blue-mid', $blue_mid),
-	('blue-light', $blue_light),
-	('yellow-dark', $yellow_dark), 
-	('yellow-mid', $yellow_mid), 
-	('yellow-light', $yellow_light), 
-	('orange-dark', $orange_dark), 
-	('orange-mid', $orange_mid), 
-	('orange-light', $orange_light), 
-	('gray-dark', $gray_dark), 
-	('gray-mid', $gray_mid), 
-	('gray-light', $gray_light), 
-	('black-dark', $black_dark), 
-	('black-mid', $black_mid), 
-	('black-light', $black_light), 
-	('purple-dark', $purple_dark), 
-	('purple-mid', $purple_mid), 
-	('purple-light', $purple_light), 
-	('black', $black), 
+	('pink-light', $pink_light),
+	('blue-dark', $blue-dark),
+	('blue-mid', $blue-mid),
+	('blue-light', $blue-light),
+	('yellow-dark', $yellow_dark),
+	('yellow-mid', $yellow_mid),
+	('yellow-light', $yellow_light),
+	('orange-dark', $orange-dark),
+	('orange-mid', $orange-mid),
+	('orange-light', $orange-light),
+	('gray-dark', $gray-dark),
+	('gray-mid', $gray-mid),
+	('gray-light', $gray-light),
+	('black-dark', $black_dark),
+	('black-mid', $black_mid),
+	('black-light', $black_light),
+	('purple-dark', $purple_dark),
+	('purple-mid', $purple_mid),
+	('purple-light', $purple_light),
+	('black', $black),
 	('white', $white) !default;
 @if $bg-color-list-add {
 	$bg-color-list: join($bg-color-list, $bg-color-list-add);
@@ -84,15 +84,15 @@ $bg-color-list: ('red-mid', $red_mid),
 
 // 常用渐变背景颜色
 $bg-line-color-list-add: false !default;
-$bg-line-color-list: (to right, 'blue', $blue_mid, $blue_mid) !default;
+$bg-line-color-list: (to right, 'blue', $blue-mid, $blue-mid) !default;
 @if $bg-line-color-list-add {
 	$bg-line-color-list: join($bg-line-color-list, $bg-line-color-list-add);
 }
 
 // 常用padding
 $padding-list-add: false !default;
-$padding-list: ('', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ) , 
-	('tb', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ), 
+$padding-list: ('', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ) ,
+	('tb', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ),
 	('lr', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ),
 	('t', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
 	('l', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
@@ -104,8 +104,8 @@ $padding-list: ('', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20
 
 // 常用margin
 $margin-list-add: false !default;
-$margin-list: ('', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)), 
-	('tb', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl) ), 
+$margin-list: ('', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
+	('tb', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl) ),
 	('lr', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl) ),
 	('t', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
 	('l', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),

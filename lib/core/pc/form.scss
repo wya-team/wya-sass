@@ -1,8 +1,8 @@
 // form
 $pc-form-bg-color: #fff;
 $pc-form-font-color: #666;
-$pc-form-active-bg-color: $orange_mid;
-$pc-form-btn-bg-color: $orange_mid;
+$pc-form-active-bg-color: $orange-mid;
+$pc-form-btn-bg-color: $orange-mid;
 $pc-form-btn-color: #fff;
 $pc-form-item-margin: 20px;
 $pc-form-line-height: 34px;
@@ -23,7 +23,7 @@ $pc-form-border-color: #e8e8e8;
 	width: $pc-form-unit;
 	height: $pc-form-unit;
 	vertical-align: middle;
-} 
+}
 @mixin switchBase($width: 110px, $height: 34px) {
 	-webkit-appearance: none;
 	border: 1px solid $pc-form-border-color;
@@ -54,7 +54,7 @@ $pc-form-border-color: #e8e8e8;
 		border: 1px solid rgba(0, 0, 0, 0.3);
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 		background: $pc-form-bg-color;
-		color: $gray_mid;
+		color: $gray-mid;
 	}
 	&:checked,
 	&.active {
@@ -78,7 +78,7 @@ $pc-form-border-color: #e8e8e8;
 }
 
 .gp-form {
-	@at-root .gp-input,  
+	@at-root .gp-input,
 		& input[type="text"],
 		& input[type="password"],
 		& input[type="number"] {
@@ -93,8 +93,8 @@ $pc-form-border-color: #e8e8e8;
 		color: $font-color-dark;
 		transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 		&:focus, &.error {
-			border-color: $blue_mid;
-			box-shadow: 0 0 3px / $scale 0 $blue_mid;
+			border-color: $blue-mid;
+			box-shadow: 0 0 3px / $scale 0 $blue-mid;
 		}
 		&:disabled, &.__disabled {
 			background: $disable-bg-color;
@@ -130,8 +130,8 @@ $pc-form-border-color: #e8e8e8;
 		}
 		&:checked:before {
 			content: "★";
-			color: $blue_mid;
-			border-color: $blue_mid;
+			color: $blue-mid;
+			border-color: $blue-mid;
 			font-family: "iconfont";
 			text-align: center;
 			line-height: $pc-form-unit / $scale;
@@ -142,9 +142,9 @@ $pc-form-border-color: #e8e8e8;
 		&.__choose {
 			width: $pc-form-unit / $scale;
 			height: $pc-form-unit / $scale;
-			color: $blue_mid;
+			color: $blue-mid;
 			border-radius: 2px / $scale;
-			border: 1px solid $blue_mid;
+			border: 1px solid $blue-mid;
 			&:before {
 				content: "";
 				width: ($pc-form-unit) / $scale;
@@ -152,8 +152,8 @@ $pc-form-border-color: #e8e8e8;
 				line-height: $pc-form-unit / $scale;
 				margin: 1px;
 				border-radius: 2px / $scale;
-				color: $blue_mid;
-				background: $blue_mid;
+				color: $blue-mid;
+				background: $blue-mid;
 				border: 1px solid $border-color;
 			}
 		}
@@ -173,14 +173,14 @@ $pc-form-border-color: #e8e8e8;
 			height: $pc-form-unit / $scale;
 			border-radius: 50%;
 			background: $white;
-			border: 1px solid $blue_mid;
+			border: 1px solid $blue-mid;
 		}
 		&:checked:after {
 			content: "";
 			display: inline-block;
 			width: $pc-form-unit / 2 / $scale;
 			height: $pc-form-unit / 2 / $scale;
-			background: $blue_mid;
+			background: $blue-mid;
 			border-radius: 50%;
 			position: absolute;
 			top: 0;
@@ -204,13 +204,13 @@ $pc-form-border-color: #e8e8e8;
 	.__head {
 		height: $pc-form-head-height;
 		background: $pc-form-head-bg;
-		color: $red_mid;
+		color: $red-mid;
 		line-height: $pc-form-head-height;
 		font-size: $pc-form-unit;
 		&:before {
 			content: '';
 			margin: 0 10px / $scale 0 16px / $scale;
-			border-right: 2px solid $red_mid;
+			border-right: 2px solid $red-mid;
 		}
 	}
 	.__content {
@@ -232,7 +232,7 @@ $pc-form-border-color: #e8e8e8;
 				text-align: right;
 				line-height: $pc-form-line-height;
 				.__require {
-					color: $red_mid;
+					color: $red-mid;
 					margin-right: 5px / $scale;
 				}
 			}
@@ -247,7 +247,7 @@ $pc-form-border-color: #e8e8e8;
 					font-size: 12px / $scale;
 				}
 				.__tip-warn {
-					color: $red_mid;
+					color: $red-mid;
 				}
 				.__hint {
 					@extend .__tip;
