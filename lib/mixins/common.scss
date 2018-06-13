@@ -83,7 +83,7 @@
 				$len: str_length($border);
 
 				@while $len > 0 {
-					
+
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {
 						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width $border-type $color;
 					}
@@ -105,10 +105,9 @@
 				}
 			}
 		}
-		
+
 	}
-	
-	
+
 }
 
 /**
@@ -220,10 +219,10 @@
 }
 
 /**
- * g-nobreak
- * 单词不换行
+ * g-break
+ * 单词换行
  */
-@mixin commonNoBreak {
+@mixin commonWordBreak {
 	word-break: break-all;
 	word-wrap: break-word;
 }

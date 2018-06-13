@@ -117,8 +117,12 @@
 	white-space: nowrap;
 }
 
-.#{$prefix}-nobreak {
-	@include commonNoBreak;
+/**
+ * g-nobreak -> g-break
+ * 历史遗留 暂时先同时保留
+ */
+.#{$prefix}-nobreak, #{$prefix}-break {
+	@include commonWordBreak;
 }
 
 .#{$prefix}-fixed {
