@@ -46,7 +46,7 @@
 	display: inline-block;
 	padding: 0 $pc-btn-pd-lr / $scale;
 	height: $pc-btn-height / $scale;
-	line-height: $pc-btn-height / $scale;
+	line-height: $pc-btn-height - 2 / $scale;
 	border-radius: $pc-btn-radius / $scale;
 	background: $bgColor;
 	color: $color;
