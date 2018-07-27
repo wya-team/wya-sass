@@ -59,7 +59,7 @@ body {
 	}
 	input, textarea {
 		outline: none;
-	} 
+	}
 	button {
 		outline-style: none;
 	}
@@ -179,7 +179,7 @@ body {
 	color: white;
 }
 
-[class*="g-bg-white"] {
+[class*="g-bg-white"], [class*="g-bg-gray-"] {
 	color: inherit;
 }
 

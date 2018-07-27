@@ -1,6 +1,7 @@
 /**
  * global
  */
+
 /**
  * [globalStrConcat description]
  * @param  {[type]} $val [description]
@@ -13,10 +14,9 @@
 		$end: str_slice($val, ($i+1), ($i+1));
 		@return #{$start}#{$end};
 	} @else {
-		@return #{$start}
+		@return #{$start};
 	}
 }
-
 
 /**
  * [globalFontSize 输出全局g-fs-#{值}]
@@ -39,6 +39,7 @@
 		}
 	}
 }
+
 /**
  * [globalFontSize 输出全局g-lh-#{值}]
  * @param  {[number]} $fontSize   [font-size的值]
@@ -60,6 +61,7 @@
 		}
 	}
 }
+
 /**
  * [globalPadding 输出全局padding g-pd-#{值/名称} ]
  * @param  {[type]} $padding [方向 值 ]
@@ -72,11 +74,11 @@
 		} @else {
 			@if (str_length($t) == 4 or str_length($t) == 0 ) {
 				@each $v in $lis {
-					@if(type_of($v) == 'number'){
+					@if (type_of($v) == 'number') {
 						.#{$prefix}-pd-#{$v} {
 							@include commonPadding($v);
 						}
-					}@else{
+					} @else {
 						.#{$prefix}-pd-#{nth(map-keys($v),1)} {
 							@include commonPadding(nth(map-values($v),1));
 						}
@@ -85,11 +87,11 @@
 				}
 			} @else {
 				@each $v in $lis {
-					@if(type_of($v) == 'number'){
+					@if (type_of($v) == 'number') {
 						.#{$prefix}-pd-#{$t}-#{$v} {
 							@include commonPadding($t, $v);
 						}
-					}@else{
+					} @else {
 						.#{$prefix}-pd-#{$t}-#{nth(map-keys($v),1)} {
 							@include commonPadding($t, nth(map-values($v),1));
 						}
@@ -100,6 +102,7 @@
 
 	}
 }
+
 /**
  * [globalMargin 输出全局margin g-m-#{值/名称}]
  * @param  {[type]} $margin [方向 值]
@@ -112,11 +115,11 @@
 		} @else {
 			@if (str_length($t) == 4 or str_length($t) == 0) {
 				@each $v in $lis {
-					@if(type_of($v) == 'number'){
+					@if (type_of($v) == 'number') {
 						.#{$prefix}-m-#{$v} {
 							@include commonMargin($v);
 						}
-					}@else{
+					} @else {
 						.#{$prefix}-m-#{nth(map-keys($v),1)} {
 							@include commonMargin(nth(map-values($v),1));
 						}
@@ -124,11 +127,11 @@
 				}
 			} @else {
 				@each $v in $lis {
-					@if(type_of($v) == 'number'){
+					@if (type_of($v) == 'number') {
 						.#{$prefix}-m-#{$t}-#{$v} {
 							@include commonMargin($t, $v);
 						}
-					}@else{
+					} @else {
 						.#{$prefix}-m-#{$t}-#{nth(map-keys($v),1)} {
 							@include commonMargin($t, nth(map-values($v),1));
 						}
@@ -139,25 +142,27 @@
 
 	}
 }
+
 /**
  * [globalLayout 输出全局栅格，浮动]
  * @param  {[number]} $total [平均分成几等分]
  * @return {[type]}        [description]
  */
 @mixin globalLayout($total) {
-	%float{
+	%float {
 		float: left;
 	}
 	@for $i from 1 through $total {
 		.#{$prefix}-w-#{$i} {
-			width: commonColumnWidth($i, $total)
+			width: commonColumnWidth($i, $total);
 		}
-		.#{$prefix}-fw-#{$i}{
+		.#{$prefix}-fw-#{$i} {
 			@extend %float;
 			@extend .#{$prefix}-w-#{$i};
 		}
 	}
 }
+
 /**
  * [globalColor 输出全局字体颜色]
  * @param  {[array]} $color [名称 字体颜色]
@@ -167,11 +172,12 @@
 	@each $name, $code in $color {
 		@if (type-of($code) == 'color') {
 			.#{$prefix}-c-#{$name} {
-				color: $code;
+				color: $code !important;
 			}
 		}
 	}
 }
+
 /**
  * [globalBgColor 输出全局背景颜色]
  * @param  {[array]} $bgColor [名称 背景色 字体颜色默认白色]
@@ -182,13 +188,14 @@
 		@if (type-of($code) == 'color') {
 			.#{$prefix}-bg-#{$name} {
 				background-color: $code;
-				@if (type-of($code2) == 'color'){
+				@if (type-of($code2) == 'color') {
 					color: $code2;
 				}
 			}
 		}
 	}
 }
+
 /**
  * [globalBgLineColor 输出全局渐变背景颜色]
  * @param  {[array]} $bgColor [方向 名称 背景色1 背景色2]
@@ -203,6 +210,7 @@
 		}
 	}
 }
+
 /**
  * [globalFlex 输出flex单个属性]
  * @param  {[string]} $attr   [属性名]
@@ -249,12 +257,13 @@
 		}
 	}
 }
+
 /**
  * [globalImgSize 图片大小]
  * @param     {[type]}    $imgsize [description]
  * @return    {[type]}             [description]
  */
-@mixin globalImgSize($imgsize){
+@mixin globalImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
 		.#{$prefix}-img-#{nth($imgsize, $i)} {
 			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
@@ -265,4 +274,3 @@
 	}
 	
 }
-
