@@ -3,15 +3,15 @@ $mobile-btn-height: 88px;
 $mobile-btn-font-size: 26px;
 $mobile-btn-radius: 44px;
 $mobile-btn-pd-lr: 20px;
-.#{$prefix}m-btn-blue-dark {
+.gm-btn-blue-dark {
 	@include mobileBtnBase($blue-dark);
 }
-.#{$prefix}m-btn-blue-mid {
+.gm-btn-blue-mid {
 	@include mobileBtnBase($blue-mid);
 }
-.#{$prefix}m-btn-blue-light {
+.gm-btn-blue-light {
 	@include mobileBtnBase($blue-light);
 }
-.#{$prefix}m-btn-lgr-blue {
+.gm-btn-lgr-blue {
 	@include mobileBtnGradientBase(to right, $blue-dark, $blue-mid);
 }

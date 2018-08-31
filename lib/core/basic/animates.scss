@@ -1,11 +1,11 @@
 $direction: down, up, left, right;
 @each $key in $direction {
-	.#{$prefix}-popup-#{$key} {
+	.g-popup-#{$key} {
 		@include animateSlide($key);
 	}
 }
 
-.#{$prefix}-bg-mask {
+.g-bg-mask {
 	@include commonAbsolute(0, 0, 0, 0);
 	@include commonSize(100%);
 	background: $mask-bg-color;
@@ -15,8 +15,8 @@ $direction: down, up, left, right;
 	animation-timing-function: $mask-timing;
 }
 
-.#{$prefix}-modal {
-	@extend .#{$prefix}-bg-mask;
+.g-modal {
+	@extend .g-bg-mask;
 	@include commonFlexCc;
 	> * {
 		width: 210px / $scale;
@@ -45,6 +45,7 @@ $direction: down, up, left, right;
 @keyframes animate-zoomOut {
 	@include animateZoom(1, 0);
 }
+
 /**
  * [$direction 方向]
  * @type {[string]}

@@ -7,7 +7,7 @@ $pc-table-tr-height: 40px;
 $pc-table-line-height: 22px;
 $pc-table-hover: #cdcdcd;
 
-.#{$prefix}p-table {
+.gp-table {
 	@include pcTableBase();
 	&.__no-padding {
 		th, td {

@@ -7,6 +7,6 @@ $mobile-form-btn-color: #fff;
 $mobile-form-item-margin: 20px;
 $mobile-form-line-height: 80px;
 
-.#{$prefix}m-form {
+.gm-form {
 	@include mobileFormBase;
 }

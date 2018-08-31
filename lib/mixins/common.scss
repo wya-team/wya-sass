@@ -85,7 +85,7 @@
 				@while $len > 0 {
 
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {
-						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width $border-type $color;
+						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width $border-type $color !important;
 					}
 					$len: $len - 1;
 				}
@@ -94,12 +94,12 @@
 	} @else {
 		$len: str_length($border);
 		@if ($len > 3) {
-			border: $width / $scale $border-type $color;
+			border: $width / $scale $border-type $color !important;
 		} @else {
 			@each $key  in $border {
 				@while $len > 0 {
 					@if (commonDirectionFill(str_slice($border, $len, $len))) {
-						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width / $scale $border-type $color;
+						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width / $scale $border-type $color !important;
 					}
 					$len: $len - 1;
 				}

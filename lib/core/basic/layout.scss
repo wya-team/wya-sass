@@ -64,115 +64,115 @@
  */
 @include globalImgSize($img-size-list);
 
-.#{$prefix}-br-circle {
-	border-radius: 100%;
+.g-br-circle {
+	border-radius: 100% !important;
 }
-.#{$prefix}-br-sem {
-	border-radius: $default-border-radius / $scale;
+.g-br-sem {
+	border-radius: $default-border-radius / $scale !important;
 }
-.#{$prefix}-b {
+.g-b {
 	@include commonBorder(brtl);
 }
-.#{$prefix}-bb {
+.g-bb {
 	@include commonBorder(b);
 }
 
-.#{$prefix}-br {
+.g-br {
 	@include commonBorder(r);
 }
 
-.#{$prefix}-bl {
+.g-bl {
 	@include commonBorder(l);
 }
 
-.#{$prefix}-bt {
+.g-bt {
 	@include commonBorder(t);
 }
 
-.#{$prefix}-bs {
-	box-shadow: $default-border-shadow;
+.g-bs {
+	box-shadow: $default-border-shadow !important;
 }
 
-.#{$prefix}-tc {
-	text-align: center;
+.g-tc {
+	text-align: center !important;
 }
 
-.#{$prefix}-tl {
-	text-align: left;
+.g-tl {
+	text-align: left !important;
 }
 
-.#{$prefix}-tr {
-	text-align: right;
+.g-tr {
+	text-align: right !important;
 }
 
-.#{$prefix}-td-lh {
-	text-decoration: line-through;
+.g-td-lh {
+	text-decoration: line-through !important;
 }
 
-.#{$prefix}-td-ul {
-	text-decoration: underline;
+.g-td-ul {
+	text-decoration: underline !important;
 }
 
-.#{$prefix}-nowrap {
-	white-space: nowrap;
+.g-nowrap {
+	white-space: nowrap !important;
 }
 
 /**
  * g-nobreak -> g-break
  * 历史遗留 暂时先同时保留
  */
-.#{$prefix}-nobreak, #{$prefix}-break {
+.g-nobreak, .g-break {
 	@include commonWordBreak;
 }
 
-.#{$prefix}-fixed {
+.g-fixed {
 	position: fixed !important;
 }
-.#{$prefix}-relative {
+.g-relative {
 	position: relative !important;
 }
 
-.#{$prefix}-absolute {
+.g-absolute {
 	position: absolute !important;
 }
 
-.#{$prefix}-clearfix:before,
-.#{$prefix}-clearfix:after,
-.#{$prefix}-row:before,
-.#{$prefix}-row:after {
+.g-clearfix:before,
+.g-clearfix:after,
+.g-row:before,
+.g-row:after {
 	display: table;
 	content: " ";
 }
-.#{$prefix}-clearfix:after,
-.#{$prefix}-row:after {
+.g-clearfix:after,
+.g-row:after {
 	clear: both;
 }
-.#{$prefix}-row {
+.g-row {
 	margin: 0;
 	padding: 0;
 }
-.#{$prefix}-fr {
+.g-fr {
 	float: right;
 }
-.#{$prefix}-fl {
+.g-fl {
 	float: left;
 }
 
-.#{$prefix}-h-full {
+.g-h-full {
 	height: 100vh;
 }
 
 /**
  * 禁用事件
  */
-.#{$prefix}-disabled {
+.g-disabled {
 	pointer-events: none;
 }
 
 /**
  * 禁用动画
  */
-.#{$prefix}-noanimate {
+.g-noanimate {
 	animation: 0 !important;
 	-webkit-animation: 0 !important;
 }
@@ -180,29 +180,29 @@
 /**
  * 一行文字
  */
-.#{$prefix}-oneline {
+.g-oneline {
 	@include commonTextLine(1);
 }
 
 /**
  * 两行文字
  */
-.#{$prefix}-twoline {
+.g-twoline {
 	@include commonTextLine(2);
 }
 
 /**
  * 两行文字 限高
  */
-.#{$prefix}-two-lh {
+.g-two-lh {
 	height: $line-height-limit * 2 / $scale;
-	line-height: $line-height-limit * 2 / $scale;
+	line-height: $line-height-limit / $scale;
 }
 
 /**
  * 一行文字 限高
  */
-.#{$prefix}-one-lh {
+.g-one-lh {
 	height: $line-height-limit / $scale;
 	line-height: $line-height-limit / $scale;
 }
@@ -210,23 +210,23 @@
 /**
  * display
  */
-.#{$prefix}-none, .#{$prefix}-hide {
+.g-none, .g-hide {
 	display: none;
 }
-.#{$prefix}-show {
+.g-show {
 	display: block;
 }
-.#{$prefix}-inline {
+.g-inline {
 	display: inline;
 }
-.#{$prefix}-linebk {
+.g-inline-block {
 	display: inline-block;
 }
 
 /**
  * cursor
  */
-.#{$prefix}-pointer {
+.g-pointer {
 	cursor: pointer;
 }
 
@@ -252,4 +252,8 @@
 	height: 5px / $scale;
 	border-radius: 50%;
 	display: block;
+}
+
+.g-of-h {
+	overflow: hidden;
 }

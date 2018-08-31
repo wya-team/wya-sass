@@ -2,37 +2,37 @@
  * flex
  */
 
-.#{$prefix}-flex{
+.g-flex {
 	display: flex;
 	box-sizing: border-box;
 }
 
-.#{$prefix}-col {
-	flex: 1
+.g-col {
+	flex: 1;
 }
 
-.#{$prefix}-col-2 {
-	flex: 2
+.g-col-2 {
+	flex: 2;
 }
 
-.#{$prefix}-full {
+.g-full {
 	flex: 0 0 100%;
 }
 
-.#{$prefix}-1of2 {
+.g-1of2 {
 	flex: 0 0 50%;
 }
 
-.#{$prefix}-1of3 {
+.g-1of3 {
 	flex: 0 0 33.3333%;
 }
 
-.#{$prefix}-1of4 {
+.g-1of4 {
 	flex: 0 0 25%;
 }
 
 // 圣杯布局
-.#{$prefix}-flex-holy {
+.g-flex-holy {
 	display: flex;
 	box-sizing: border-box;
 	min-height: 100vh;
@@ -40,17 +40,17 @@
 }
 
 // 水平垂直对齐
-.#{$prefix}-flex-cc {
+.g-flex-cc {
 	@include commonFlexCc;
 }
 
-.#{$prefix}-flex-ac {
+.g-flex-ac {
 	display: flex;
 	box-sizing: border-box;
 	align-items: center;
 }
 @for $i from 1 through length($grid-list) {
-	.#{$prefix}-flex-grid-#{nth($grid-list, $i)} {
+	.g-flex-grid-#{nth($grid-list, $i)} {
 		@include globalGrid(nth($grid-list, $i));
 	}
 }

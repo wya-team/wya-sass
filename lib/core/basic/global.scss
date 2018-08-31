@@ -28,11 +28,11 @@
 	@for $i from 1 through length($fontSize) {
 		@if (type-of(nth($fontSize, $i)) == 'number') {
 			@if (unitless(nth($fontSize, $i))) {
-				.#{$prefix}-fs-#{nth($fontSize, $i)} {
+				.g-fs-#{nth($fontSize, $i)} {
 					font-size: #{nth($fontSize, $i) / $scale}#{$unit};
 				}
 			} @else {
-				.#{$prefix}-fs-#{nth($fontSize, $i)} {
+				.g-fs-#{nth($fontSize, $i)} {
 					font-size: #{nth($fontSize, $i) / $scale};
 				}
 			}
@@ -50,11 +50,11 @@
 	@for $i from 1 through length($line-height) {
 		@if (type-of(nth($line-height, $i)) == 'number') {
 			@if (unitless(nth($line-height, $i))) {
-				.#{$prefix}-lh-#{nth($line-height, $i)} {
+				.g-lh-#{nth($line-height, $i)} {
 					line-height: #{nth($line-height, $i) / $scale}#{$unit};
 				}
 			} @else {
-				.#{$prefix}-lh-#{nth($line-height, $i)} {
+				.g-lh-#{nth($line-height, $i)} {
 					line-height: #{nth($line-height, $i) / $scale};
 				}
 			}
@@ -75,11 +75,11 @@
 			@if (str_length($t) == 4 or str_length($t) == 0 ) {
 				@each $v in $lis {
 					@if (type_of($v) == 'number') {
-						.#{$prefix}-pd-#{$v} {
+						.g-pd-#{$v} {
 							@include commonPadding($v);
 						}
 					} @else {
-						.#{$prefix}-pd-#{nth(map-keys($v),1)} {
+						.g-pd-#{nth(map-keys($v),1)} {
 							@include commonPadding(nth(map-values($v),1));
 						}
 					}
@@ -88,11 +88,11 @@
 			} @else {
 				@each $v in $lis {
 					@if (type_of($v) == 'number') {
-						.#{$prefix}-pd-#{$t}-#{$v} {
+						.g-pd-#{$t}-#{$v} {
 							@include commonPadding($t, $v);
 						}
 					} @else {
-						.#{$prefix}-pd-#{$t}-#{nth(map-keys($v),1)} {
+						.g-pd-#{$t}-#{nth(map-keys($v),1)} {
 							@include commonPadding($t, nth(map-values($v),1));
 						}
 					}
@@ -116,11 +116,11 @@
 			@if (str_length($t) == 4 or str_length($t) == 0) {
 				@each $v in $lis {
 					@if (type_of($v) == 'number') {
-						.#{$prefix}-m-#{$v} {
+						.g-m-#{$v} {
 							@include commonMargin($v);
 						}
 					} @else {
-						.#{$prefix}-m-#{nth(map-keys($v),1)} {
+						.g-m-#{nth(map-keys($v),1)} {
 							@include commonMargin(nth(map-values($v),1));
 						}
 					}
@@ -128,11 +128,11 @@
 			} @else {
 				@each $v in $lis {
 					@if (type_of($v) == 'number') {
-						.#{$prefix}-m-#{$t}-#{$v} {
+						.g-m-#{$t}-#{$v} {
 							@include commonMargin($t, $v);
 						}
 					} @else {
-						.#{$prefix}-m-#{$t}-#{nth(map-keys($v),1)} {
+						.g-m-#{$t}-#{nth(map-keys($v),1)} {
 							@include commonMargin($t, nth(map-values($v),1));
 						}
 					}
@@ -153,12 +153,12 @@
 		float: left;
 	}
 	@for $i from 1 through $total {
-		.#{$prefix}-w-#{$i} {
+		.g-w-#{$i} {
 			width: commonColumnWidth($i, $total);
 		}
-		.#{$prefix}-fw-#{$i} {
+		.g-fw-#{$i} {
 			@extend %float;
-			@extend .#{$prefix}-w-#{$i};
+			@extend .g-w-#{$i};
 		}
 	}
 }
@@ -171,7 +171,7 @@
 @mixin globalColor($color) {
 	@each $name, $code in $color {
 		@if (type-of($code) == 'color') {
-			.#{$prefix}-c-#{$name} {
+			.g-c-#{$name} {
 				color: $code !important;
 			}
 		}
@@ -186,7 +186,7 @@
 @mixin globalBgColor($bgColor) {
 	@each $name, $code, $code2 in $bgColor {
 		@if (type-of($code) == 'color') {
-			.#{$prefix}-bg-#{$name} {
+			.g-bg-#{$name} {
 				background-color: $code;
 				@if (type-of($code2) == 'color') {
 					color: $code2;
@@ -204,7 +204,7 @@
 @mixin globalBgLineColor($bgLineColor) {
 	@each $grad, $name, $code, $code2 in $bgLineColor {
 		@if (type-of($code) == 'color') {
-			.#{$prefix}-bg-lg-#{$name} {
+			.g-bg-lg-#{$name} {
 				@include commonBgLinear($grad, $code, $code2);
 			}
 		}
@@ -219,7 +219,7 @@
  */
 @mixin globalFlex($attr, $key...) {
 	@each $k in $key {
-		.#{$prefix}-#{globalStrConcat($attr)}-#{globalStrConcat($k)} {
+		.g-#{globalStrConcat($attr)}-#{globalStrConcat($k)} {
 			#{$attr}: $k;
 		}
 	}
@@ -265,7 +265,7 @@
  */
 @mixin globalImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
-		.#{$prefix}-img-#{nth($imgsize, $i)} {
+		.g-img-#{nth($imgsize, $i)} {
 			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
 			width: #{nth($imgsize, $i) / $scale}#{$unit};
 			height: #{nth($imgsize, $i) / $scale}#{$unit};

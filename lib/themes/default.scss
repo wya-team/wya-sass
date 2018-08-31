@@ -6,7 +6,7 @@ $scale: 1 !default;
 // 单位
 $unit: px !default;
 
-// 全局前缀
+// 全局前缀 已废弃 @0.3.0
 $prefix: g !default;
 
 // 栅格布局 12等分
@@ -36,7 +36,7 @@ $font-color-mid: $black-mid !default;
 $font-color-light: $black-light !default;
 
 // 边框颜色
-$border-color: #cdcdcd !default;
+$border-color: #e6e6e6 !default;
 
 // 字体尺寸
 $font-size-base: 14px !default;
