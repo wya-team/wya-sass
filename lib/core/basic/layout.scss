@@ -210,24 +210,24 @@
 /**
  * display
  */
-.g-none, .g-hide {
-	display: none;
+.g-none, .g-dp-n, .g-hide {
+	display: none !important;
 }
-.g-show, .g-block {
-	display: block;
+.g-show, .g-dp-b, .g-block {
+	display: block !important;
 }
-.g-inline {
-	display: inline;
+.g-dp-i, .g-inline {
+	display: inline !important;
 }
-.g-inline-block {
-	display: inline-block;
+.g-dp-ib, .g-inline-block {
+	display: inline-block !important;
 }
 
 /**
  * cursor
  */
 .g-pointer {
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 /**
@@ -255,5 +255,5 @@
 }
 
 .g-of-h {
-	overflow: hidden;
+	overflow: hidden !important;
 }
