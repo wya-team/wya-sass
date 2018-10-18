@@ -131,33 +131,35 @@ body {
 }
 
 /**
- * scrollbar width
+ * 滚动条
  */
-::-webkit-scrollbar {
-	width: 4px / $scale;
-}
+.g-scroller {
+	/**
+	 * scrollbar width
+	 */
+	&::-webkit-scrollbar {
+		width: 4px / $scale;
+		&:horizontal {
+			height: 2px / $scale;
+		}
+	}
+	
+	/**
+	 * scrollbar bg
+	 */
+	&::-webkit-scrollbar-track {
+		box-shadow: $scrollbar-track-box-shadow;
+		border-radius: 5px / $scale;
+		background: $scrollbar-track-bg-color;
+	}
 
-::-webkit-scrollbar:horizontal {
-	height: 2px / $scale;
-}
-
-/**
- * scrollbar bg
- */
-
-::-webkit-scrollbar-track {
-	box-shadow: $scrollbar-track-box-shadow;
-	border-radius: 5px / $scale;
-	background: $scrollbar-track-bg-color;
-}
-
-/**
- * Handle
- */
-
-::-webkit-scrollbar-thumb {
-	border-radius: 5px / $scale;
-	background: $scrollbar-thumb-bg-color;
+	/**
+	 * Handle
+	 */
+	&::-webkit-scrollbar-thumb {
+		border-radius: 5px / $scale;
+		background: $scrollbar-thumb-bg-color;
+	}
 }
 
 #pages,
