@@ -21,18 +21,6 @@ body {
 	border: none;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-
-	/**
-	 * 字体样式不模糊
-	 */
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-
-	/**
-	 * 可以复制粘帖
-	 */
-	-webkit-user-select: text !important;
-	user-select: text !important;
 }
 
 /**
