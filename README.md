@@ -171,52 +171,52 @@ npm install --save wya-sass
 
 | class  | 备注  |
 |:-------------|:---------------| 
-|.g-c-blue-dark | `#0b76fe` |
-|.g-c-blue-mid | `#16a3ff` |
-|.g-c-blue-light | `#6ab4ff` |
-|.g-c-yellow-dark | `#f2c300` |
-|.g-c-yellow-mid | `#ffd00d` |
-|.g-c-yellow-light | `#ffd31c` |
-|.g-c-orange-dark | `#ef3528` |
-|.g-c-orange-mid | `#fa6f60` |
-|.g-c-orange-light | `#fc9780` |
-|.g-c-gray-dark | `#edeef0` |
-|.g-c-gray-mid | `#f5f6f7` |
-|.g-c-gray-light | `#f7f8fa` |
-|.g-c-black-dark | `#2e3136` |
-|.g-c-black-mid | `#636770` |
-|.g-c-black-light | `#9c9fa6` |
-|.g-c-purple-dark | `#8b61f3` |
-|.g-c-purple-mid | `#a48efc` |
-|.g-c-purple-light | `#cca3ff` |
-|.g-c-black | `#000000` |
-|.g-c-white | `#ffffff` |
+|.g-c-blue-dark | <div style="color: #0b76fe;">blue-dark</div> |
+|.g-c-blue-mid | <div style="color: #16a3ff;">blue-mid</div> |
+|.g-c-blue-light | <div style="color: #6ab4ff;">blue-light</div> |
+|.g-c-yellow-dark | <div style="color: #f2c300;">yellow-dark</div> |
+|.g-c-yellow-mid | <div style="color: #ffd00d;">yellow-mid</div> |
+|.g-c-yellow-light | <div style="color: #ffd31c;">yellow-light</div> |
+|.g-c-orange-dark | <div style="color: #ef3528;">orange-dark</div> |
+|.g-c-orange-mid | <div style="color: #fa6f60;">orange-mid</div> |
+|.g-c-orange-light | <div style="color: #fc9780;">orange-light</div> |
+|.g-c-gray-dark | <div style="color: #edeef0;">gray-dark</div> |
+|.g-c-gray-mid | <div style="color: #f5f6f7;">gray-mid</div> |
+|.g-c-gray-light | <div style="color: #f7f8fa;">gray-light</div> |
+|.g-c-black-dark | <div style="color: #2e3136;">black-dark</div> |
+|.g-c-black-mid | <div style="color: #636770;">black-mid</div> |
+|.g-c-black-light | <div style="color: #9c9fa6;">black-light</div> |
+|.g-c-purple-dark | <div style="color: #8b61f3;">purple-dark</div> |
+|.g-c-purple-mid | <div style="color: #a48efc;">purple-mid</div> |
+|.g-c-purple-light | <div style="color: #cca3ff;">purple-light</div> |
+|.g-c-black | <div style="color: #000;">black</div> |
+|.g-c-white | <div style="color: #fff;">white</div> |
 
 
 > bgColor g-bg-(颜色／变量)
 
 | class  | 备注  |
 |:-------------|:---------------|
-|.g-bg-blue-dark | `#0b76fe` |
-|.g-bg-blue-mid | `#16a3ff` |
-|.g-bg-blue-light | `#6ab4ff` |
-|.g-bg-yellow-dark | `#f2c300` |
-|.g-bg-yellow-mid | `#ffd00d` |
-|.g-bg-yellow-light | `#ffd31c` |
-|.g-bg-orange-dark | `#ef3528` |
-|.g-bg-orange-mid | `#fa6f60` |
-|.g-bg-orange-light | `#fc9780` |
-|.g-bg-gray-dark | `#edeef0` |
-|.g-bg-gray-mid | `#f5f6f7` |
-|.g-bg-gray-light | `#f7f8fa` |
-|.g-bg-black-dark | `#2e3136` |
-|.g-bg-black-mid | `#636770` |
-|.g-bg-black-light | `#9c9fa6` |
-|.g-bg-purple-dark | `#8b61f3` |
-|.g-bg-purple-mid | `#a48efc` |
-|.g-bg-purple-light | `#cca3ff` |
-|.g-bg-black | `#000000` |
-|.g-bg-white | `#ffffff` |
+|.g-bg-blue-dark | <div style="background: #0b76fe; height: 10px" /> |
+|.g-bg-blue-mid | <div style="background: #16a3ff; height: 10px" /> |
+|.g-bg-blue-light | <div style="background: #6ab4ff; height: 10px" /> |
+|.g-bg-yellow-dark | <div style="background: #f2c300; height: 10px" /> |
+|.g-bg-yellow-mid | <div style="background: #ffd00d; height: 10px" /> |
+|.g-bg-yellow-light | <div style="background: #ffd31c; height: 10px" /> |
+|.g-bg-orange-dark | <div style="background: #ef3528; height: 10px" /> |
+|.g-bg-orange-mid | <div style="background: #fa6f60; height: 10px" /> |
+|.g-bg-orange-light | <div style="background: #fc9780; height: 10px" /> |
+|.g-bg-gray-dark | <div style="background: #edeef0; height: 10px" /> |
+|.g-bg-gray-mid |  <div style="background: #f5f6f7; height: 10px" />|
+|.g-bg-gray-light | <div style="background: #f7f8fa; height: 10px" /> |
+|.g-bg-black-dark | <div style="background: #2e3136; height: 10px" /> |
+|.g-bg-black-mid | <div style="background: #636770; height: 10px" /> |
+|.g-bg-black-light | <div style="background: #9c9fa6; height: 10px" /> |
+|.g-bg-purple-dark | <div style="background: #8b61f3; height: 10px" /> |
+|.g-bg-purple-mid | <div style="background: #a48efc; height: 10px" /> |
+|.g-bg-purple-light | <div style="background: #cca3ff; height: 10px" /> |
+|.g-bg-black | <div style="background: #000; height: 10px" /> |
+|.g-bg-white | <div style="background: #fff; height: 10px" /> |
 
 > font-size g-fs-(字号)
 
