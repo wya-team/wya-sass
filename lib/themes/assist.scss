@@ -5,14 +5,14 @@
 
 // 常用字体大小
 $font-size-list-add: false !default;
-$font-size-list: 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 36, 40, 50, 60, 90, 100 !default;
+$font-size-list: 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 50, 60, 70, 80, 90, 100 !default;
 @if $font-size-list-add {
 	$font-size-list: join($font-size-list, $font-size-list-add);
 }
 
 // 常用行高
 $line-height-list-add: false !default;
-$line-height-list: 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 60, 72, 80, 88, 120 !default;
+$line-height-list: 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 60, 72, 80, 88, 120 !default;
 @if $line-height-list-add {
 	$line-height-list: join($line-height-list, $line-height-list-add);
 }
@@ -91,26 +91,26 @@ $bg-line-color-list: (to right, 'blue', $blue-mid, $blue-mid) !default;
 
 // 常用padding
 $padding-list-add: false !default;
-$padding-list: ('', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ) ,
-	('tb', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ),
-	('lr', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl) ),
-	('t', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
-	('l', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
-	('r', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)),
-	('b', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('30':$padding-xl)) !default;
+$padding-list: ('', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl) ) ,
+	('tb', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl) ),
+	('lr', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl) ),
+	('t', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl)),
+	('l', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl)),
+	('r', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl)),
+	('b', ('5':$padding-xs) ('10':$padding-sm) ('15':$padding-md) ('20':$padding-lg) ('25':$padding-xl) ('30':$padding-xxl)) !default;
 @if $padding-list-add {
 	$padding-list: join($padding-list, $padding-list-add);
 }
 
 // 常用margin
 $margin-list-add: false !default;
-$margin-list: ('', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
-	('tb', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl) ),
-	('lr', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl) ),
-	('t', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
-	('l', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
-	('r', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)),
-	('b', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('30':$margin-xl)) !default;
+$margin-list: ('', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl)),
+	('tb', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl) ),
+	('lr', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl) ),
+	('t', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl)),
+	('l', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl)),
+	('r', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl)),
+	('b', ('5':$margin-xs) ('10':$margin-sm) ('15':$margin-md) ('20':$margin-lg) ('25':$margin-xl) ('30':$margin-xxl)) !default;
 @if $margin-list-add {
 	$margin-list: join($margin-list, $margin-list-add);
 }
