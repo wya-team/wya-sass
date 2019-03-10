@@ -1,4 +1,8 @@
 # 历史版本
+
+### 1.0.0 (2019-03-10)
+* `wya-sass` -> `@wya/sass`
+
 ### 0.2.6 (2018-06-13)
 * `g-nobreak` -> `g-break`, 单词换行
 * `g-operation` 颜色`!important`

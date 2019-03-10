@@ -1,8 +1,8 @@
-# wya-sass 
+# \@wya/sass
 [![npm][npm-image]][npm-url] [![changelog][changelog-image]][changelog-url]
 
 ```
-npm install --save wya-sass
+npm install --save @wya/sass
 ```
 
 [1. 准则](#1)  
@@ -495,5 +495,5 @@ npm install --save wya-sass
 [changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg
 [changelog-url]: CHANGELOG.md
 
-[npm-image]: https://img.shields.io/npm/v/wya-sass.svg
-[npm-url]: https://www.npmjs.com/package/wya-sass
+[npm-image]: https://img.shields.io/npm/v/@wya/sass.svg
+[npm-url]: https://www.npmjs.com/package/@wya/sass
