@@ -1,14 +1,15 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-# /dist
-/tmp
+# dist
+tmp
+lib
 
 # dependencies
-/node_modules
+node_modules
 
 # IDEs and editors
-/.idea
+.idea
 .project
 .classpath
 .c9/
@@ -23,18 +24,33 @@
 !.vscode/extensions.json
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage/*
-/libpeerconnection.log
+.sass-cache
+connect.lock
+coverage/*
+libpeerconnection.log
 npm-debug.log
 testem.log
-/typings
+typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+e2e/*.js
+e2e/*.map
 
 # System Files
 .DS_Store
 Thumbs.db
+
+# others
+tests/coverage
+
+# error
+yarn-error.log
+npm-error.log
+
+# user config
+routes.dev.js
+user.config.js
+
+# lock
+yarn.lock
+package-lock.json
