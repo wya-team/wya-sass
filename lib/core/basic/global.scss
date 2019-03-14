@@ -263,13 +263,26 @@
  * @param     {[type]}    $imgsize [description]
  * @return    {[type]}             [description]
  */
-@mixin globalImgSize($imgsize) {
+@mixin globalCircleImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
-		.g-img-#{nth($imgsize, $i)} {
+		.g-imgc-#{nth($imgsize, $i)} {
 			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
 			width: #{nth($imgsize, $i) / $scale}#{$unit};
 			height: #{nth($imgsize, $i) / $scale}#{$unit};
 			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+			border-radius: 50%;
+		}
+	}
+	
+}
+@mixin globalRadiusImgSize($imgsize) {
+	@for $i from 1 through length($imgsize) {
+		.g-imgr-#{nth($imgsize, $i)} {
+			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
+			width: #{nth($imgsize, $i) / $scale}#{$unit};
+			height: #{nth($imgsize, $i) / $scale}#{$unit};
+			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+			border-radius: 4px;
 		}
 	}
 	

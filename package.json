@@ -11,7 +11,7 @@
 	"scripts": {
 		"lint-staged": "lint-staged",
 		"pub": "npm publish --access public",
-		"build": "gulp default"
+		"build": "gulp build"
 	},
 	"author": "wya-team",
 	"license": "MIT",
