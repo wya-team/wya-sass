@@ -10,7 +10,8 @@
 	],
 	"scripts": {
 		"lint-staged": "lint-staged",
-		"pub": "npm publish --access public"
+		"pub": "npm publish --access public",
+		"build": "gulp default"
 	},
 	"author": "wya-team",
 	"license": "MIT",

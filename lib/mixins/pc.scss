@@ -116,13 +116,13 @@
 			font-weight: normal;
 			vertical-align: middle;
 			white-space: nowrap;
-			padding: ($pc-table-tr-height - $pc-table-line-height) / 2 / $scale  $padding-md / $scale;
+			padding: ($pc-table-tr-height - $pc-table-line-height) / 2 / $scale  $padding-15 / $scale;
 		}
 	}
 	tbody {
 		td {
 			line-height: $pc-table-line-height;
-			padding: ($pc-table-tr-height - $pc-table-line-height) / 2 / $scale $padding-md / $scale;
+			padding: ($pc-table-tr-height - $pc-table-line-height) / 2 / $scale $padding-15 / $scale;
 			@include commonBorder(b, $pc-table-border);
 			&:after {
 				content: "";
