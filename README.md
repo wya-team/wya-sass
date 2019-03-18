@@ -191,6 +191,25 @@ npm install --save @wya/sass
 |.g-c-purple-light | `#cca3ff` | <div style="color: #cca3ff;">purple-light</div> |
 |.g-c-black | `#000` | <div style="color: #000;">black</div> |
 |.g-c-white | `#fff` | <div style="color: #fff;">white</div> |
+|.g-c-444 | `#444` | <div style="color: #444;">444</div> |
+|.g-c-67 | `#676767` | <div style="color: #676767;">676767</div> |
+|.g-c-f8 | `#f8f8f8` | <div style="color: #f8f8f8;">f8f8f8</div> |
+|.g-c-ef | `#efefef` | <div style="color: #efefef;">efefef</div> |
+|.g-c-e8 | `#e8e8e8` | <div style="color: #e8e8e8;">e8e8e8</div> |
+|.g-c-d9 | `#d9d9d9` | <div style="color: #d9d9d9;">d9d9d9</div> |
+|.g-c-f4 | `#f4f4f4` | <div style="color: #f4f4f4;">f4f4f4</div> |
+|.g-c-f9 | `#f9f9f9` | <div style="color: #f9f9f9;">f9f9f9</div> |
+|.g-c-000 | `#000000` | <div style="color: #000000;">000000</div> |
+|.g-c-333 | `#333333` | <div style="color: #333333;">333333</div> |
+|.g-c-51 | `#515151` | <div style="color: #515151;">515151</div> |
+|.g-c-67 | `#676767` | <div style="color: #676767;">676767</div> |
+|.g-c-999 | `#999999` | <div style="color: #999999;">999999</div> |
+|.g-c-aaa | `#aaaaaa` | <div style="color: #aaaaaa;">aaaaaa</div> |
+|.g-c-bd | `#bdbdbd` | <div style="color: #bdbdbd;">bdbdbd</div> |
+|.g-c-info | `#0177de` | <div style="color: #0177de;">0177de</div> |
+|.g-c-success | `#00a854` | <div style="color: #00a854;">00a854</div> |
+|.g-c-error | `#f04134` | <div style="color: #f04134;">f04134</div> |
+|.g-c-warn | `#ffbf00` | <div style="color: #ffbf00;">ffbf00</div> |
 
 
 > bgColor g-bg-(颜色／变量)  颜色效果可在MarkDown编辑器中查看
@@ -217,6 +236,25 @@ npm install --save @wya/sass
 |.g-bg-purple-light | `#cca3ff` | <div style="background: #cca3ff; height: 10px" /> |
 |.g-bg-black | `#000` | <div style="background: #000; height: 10px" /> |
 |.g-bg-white | `#fff` | <div style="background: #fff; height: 10px" /> |
+|.g-bg-444 | `#444` | <div style="background: #444; height: 10px" /> |
+|.g-bg-67 | `#676767` | <div style="background: #676767; height: 10px" /> |
+|.g-bg-f8 | `#f8f8f8` | <div style="background: #f8f8f8; height: 10px" /> |
+|.g-bg-ef | `#efefef` | <div style="background: #efefef; height: 10px" /> |
+|.g-bg-e8 | `#e8e8e8` | <div style="background: #e8e8e8; height: 10px" /> |
+|.g-bg-d9 | `#d9d9d9` | <div style="background: #d9d9d9; height: 10px" /> |
+|.g-bg-f4 | `#f4f4f4` | <div style="background: #f4f4f4; height: 10px" /> |
+|.g-bg-f9 | `#f9f9f9` | <div style="background: #f9f9f9; height: 10px" /> |
+|.g-bg-000 | `#000000` | <div style="background: #000000; height: 10px" /> |
+|.g-bg-333 | `#333333` | <div style="background: #333333; height: 10px" /> |
+|.g-bg-51 | `#515151` | <div style="background: #515151; height: 10px" /> |
+|.g-bg-67 | `#676767` | <div style="background: #676767; height: 10px" /> |
+|.g-bg-999 | `#999999` | <div style="background: #999999; height: 10px" /> |
+|.g-bg-aaa | `#aaaaaa` | <div style="background: #aaaaaa; height: 10px" /> |
+|.g-bg-bd | `#bdbdbd` | <div style="background: #bdbdbd; height: 10px" /> |
+|.g-bg-info | `#0177de` | <div style="background: #0177de; height: 10px" /> |
+|.g-bg-success | `#00a854` | <div style="background: #00a854; height: 10px" /> |
+|.g-bg-error | `#f04134` | <div style="background: #f04134; height: 10px" /> |
+|.g-bg-warn | `#ffbf00` | <div style="background: #ffbf00; height: 10px" /> |
 
 > font-size g-fs-(字号)
 
@@ -276,110 +314,248 @@ npm install --save @wya/sass
 | class  | 备注  |
 |:-------------|:---------------| 
 |.g-pd-5| `padding: 5px` |
+|.g-pd-8| `padding: 8px` |
 |.g-pd-10| `padding: 10px` |
+|.g-pd-12| `padding: 12px` |
+|.g-pd-13| `padding: 13px` |
 |.g-pd-15| `padding: 15px` |
+|.g-pd-16| `padding: 16px` |
+|.g-pd-18| `padding: 18px` |
 |.g-pd-20| `padding: 20px` |
+|.g-pd-21| `padding: 21px` |
+|.g-pd-24| `padding: 24px` |
 |.g-pd-25| `padding: 25px` |
 |.g-pd-30| `padding: 30px` |
+|.g-pd-32| `padding: 32px` |
+|.g-pd-48| `padding: 48px` |
+|.g-pd-56| `padding: 56px` |
 |.g-pd-tb-5| `padding-top: 5px; padding-bottom: 5px` |
+|.g-pd-tb-8| `padding-top: 8px; padding-bottom: 8px` |
 |.g-pd-tb-10| `padding-top: 10px; padding-bottom: 10px` |
+|.g-pd-tb-12| `padding-top: 12px; padding-bottom: 12px` |
+|.g-pd-tb-13| `padding-top: 13px; padding-bottom: 13px` |
 |.g-pd-tb-15| `padding-top: 15px; padding-bottom: 15px` |
+|.g-pd-tb-16| `padding-top: 16px; padding-bottom: 16px` |
+|.g-pd-tb-18| `padding-top: 18px; padding-bottom: 18px` |
 |.g-pd-tb-20| `padding-top: 20px; padding-bottom: 20px` |
+|.g-pd-tb-21| `padding-top: 21px; padding-bottom: 21px` |
+|.g-pd-tb-24| `padding-top: 24px; padding-bottom: 24px` |
 |.g-pd-tb-25| `padding-top: 25px; padding-bottom: 25px` |
 |.g-pd-tb-30| `padding-top: 30px; padding-bottom: 30px` |
+|.g-pd-tb-32| `padding-top: 32px; padding-bottom: 32px` |
+|.g-pd-tb-48| `padding-top: 48px; padding-bottom: 48px` |
+|.g-pd-tb-56| `padding-top: 56px; padding-bottom: 56px` |
 |.g-pd-lr-5 | `padding-left: 5px; padding-right: 5px`|
+|.g-pd-lr-8 | `padding-left: 8px; padding-right: 8px`|
 |.g-pd-lr-10 | `padding-left: 10px; padding-right: 10px`|
+|.g-pd-lr-13 | `padding-left: 13px; padding-right: 13px`|
 |.g-pd-lr-15 | `padding-left: 15px; padding-right: 15px`|
+|.g-pd-lr-16 | `padding-left: 16px; padding-right: 16px`|
+|.g-pd-lr-18 | `padding-left: 18px; padding-right: 18px`|
 |.g-pd-lr-20 | `padding-left: 20px; padding-right: 20px`|
+|.g-pd-lr-21 | `padding-left: 21px; padding-right: 21px`|
+|.g-pd-lr-24 | `padding-left: 24px; padding-right: 24px`|
 |.g-pd-lr-25 | `padding-left: 25px; padding-right: 25px`|
 |.g-pd-lr-30 | `padding-left: 30px; padding-right: 30px`|
+|.g-pd-lr-32 | `padding-left: 32px; padding-right: 32px`|
+|.g-pd-lr-48 | `padding-left: 48px; padding-right: 48px`|
+|.g-pd-lr-56 | `padding-left: 56px; padding-right: 56px`|
 |.g-pd-t-5| `padding-top: 5px` |
+|.g-pd-t-8| `padding-top: 8px` |
 |.g-pd-t-10| `padding-top: 10px` |
+|.g-pd-t-12| `padding-top: 12px` |
+|.g-pd-t-13| `padding-top: 13px` |
 |.g-pd-t-15| `padding-top: 15px` |
+|.g-pd-t-16| `padding-top: 16px` |
+|.g-pd-t-18| `padding-top: 18px` |
 |.g-pd-t-20| `padding-top: 20px` |
+|.g-pd-t-21| `padding-top: 21px` |
+|.g-pd-t-24| `padding-top: 24px` |
 |.g-pd-t-25| `padding-top: 25px` |
 |.g-pd-t-30| `padding-top: 30px` |
+|.g-pd-t-32| `padding-top: 32px` |
+|.g-pd-t-48| `padding-top: 48px` |
+|.g-pd-t-56| `padding-top: 56px` |
 |.g-pd-l-5| `padding-left: 5px` |
+|.g-pd-l-8| `padding-left: 8px` |
 |.g-pd-l-10| `padding-left: 10px` |
+|.g-pd-l-12| `padding-left: 12px` |
+|.g-pd-l-13| `padding-left: 13px` |
 |.g-pd-l-15| `padding-left: 15px` |
+|.g-pd-l-16| `padding-left: 16px` |
+|.g-pd-l-18| `padding-left: 18px` |
 |.g-pd-l-20| `padding-left: 20px` |
+|.g-pd-l-21| `padding-left: 21px` |
+|.g-pd-l-24| `padding-left: 24px` |
 |.g-pd-l-25| `padding-left: 25px` |
 |.g-pd-l-30| `padding-left: 30px` |
+|.g-pd-l-32| `padding-left: 32px` |
+|.g-pd-l-48| `padding-left: 48px` |
+|.g-pd-l-56| `padding-left: 56px` |
 |.g-pd-b-5| `padding-bottom: 5px` |
+|.g-pd-b-8| `padding-bottom: 8px` |
 |.g-pd-b-10| `padding-bottom: 10px` |
+|.g-pd-b-12| `padding-bottom: 12px` |
+|.g-pd-b-13| `padding-bottom: 13px` |
 |.g-pd-b-15| `padding-bottom: 15px` |
+|.g-pd-b-16| `padding-bottom: 16px` |
+|.g-pd-b-18| `padding-bottom: 18px` |
 |.g-pd-b-20| `padding-bottom: 20px` |
+|.g-pd-b-21| `padding-bottom: 21px` |
+|.g-pd-b-24| `padding-bottom: 24px` |
 |.g-pd-b-25| `padding-bottom: 25px` |
 |.g-pd-b-30| `padding-bottom: 30px` |
+|.g-pd-b-32| `padding-bottom: 32px` |
+|.g-pd-b-48| `padding-bottom: 48px` |
+|.g-pd-b-56| `padding-bottom: 56px` |
 |.g-pd-r-5| `padding-right: 5px` |
+|.g-pd-r-8| `padding-right: 8px` |
 |.g-pd-r-10| `padding-right: 10px` |
+|.g-pd-r-12| `padding-right: 12px` |
+|.g-pd-r-13| `padding-right: 13px` |
 |.g-pd-r-15| `padding-right: 15px` |
+|.g-pd-r-16| `padding-right: 16px` |
+|.g-pd-r-18| `padding-right: 18px` |
 |.g-pd-r-20| `padding-right: 20px` |
+|.g-pd-r-21| `padding-right: 21px` |
+|.g-pd-r-24| `padding-right: 24px` |
 |.g-pd-r-25| `padding-right: 25px` |
 |.g-pd-r-30| `padding-right: 30px` |
+|.g-pd-r-32| `padding-right: 32px` |
+|.g-pd-r-48| `padding-right: 48px` |
+|.g-pd-r-56| `padding-right: 56px` |
 
 > margin g-m-(方向)?-(值/变量) 
 
 | class  | 备注  |
 |:-------------|:---------------| 
 |.g-m-5| `margin: 5px` |
+|.g-m-8| `margin: 8px` |
 |.g-m-10| `margin: 10px` |
+|.g-m-12| `margin: 12px` |
+|.g-m-13| `margin: 13px` |
 |.g-m-15| `margin: 15px` |
+|.g-m-16| `margin: 16px` |
+|.g-m-18| `margin: 18px` |
 |.g-m-20| `margin: 20px` |
+|.g-m-21| `margin: 21px` |
+|.g-m-24| `margin: 24px` |
 |.g-m-25| `margin: 25px` |
 |.g-m-30| `margin: 30px` |
+|.g-m-32| `margin: 32px` |
+|.g-m-48| `margin: 48px` |
+|.g-m-56| `margin: 56px` |
 |.g-m-tb-5| `margin-top: 5px; margin-bottom: 5px` |
+|.g-m-tb-8| `margin-top: 8px; margin-bottom: 8px` |
 |.g-m-tb-10| `margin-top: 10px; margin-bottom: 10px` |
+|.g-m-tb-12| `margin-top: 12px; margin-bottom: 12px` |
+|.g-m-tb-13| `margin-top: 13px; margin-bottom: 13px` |
 |.g-m-tb-15| `margin-top: 15px; margin-bottom: 15px` |
+|.g-m-tb-16| `margin-top: 16px; margin-bottom: 16px` |
+|.g-m-tb-18| `margin-top: 18px; margin-bottom: 18px` |
 |.g-m-tb-20| `margin-top: 20px; margin-bottom: 20px` |
+|.g-m-tb-21| `margin-top: 21px; margin-bottom: 21px` |
+|.g-m-tb-24| `margin-top: 24px; margin-bottom: 24px` |
 |.g-m-tb-25| `margin-top: 25px; margin-bottom: 25px` |
 |.g-m-tb-30| `margin-top: 30px; margin-bottom: 30px` |
+|.g-m-tb-32| `margin-top: 32px; margin-bottom: 32px` |
+|.g-m-tb-48| `margin-top: 48px; margin-bottom: 48px` |
+|.g-m-tb-56| `margin-top: 56px; margin-bottom: 56px` |
 |.g-m-lr-5 | `margin-left: 5px; margin-right: 5px`|
+|.g-m-lr-8 | `margin-left: 8px; margin-right: 8px`|
 |.g-m-lr-10 | `margin-left: 10px; margin-right: 10px`|
+|.g-m-lr-13 | `margin-left: 13px; margin-right: 13px`|
 |.g-m-lr-15 | `margin-left: 15px; margin-right: 15px`|
+|.g-m-lr-16 | `margin-left: 16px; margin-right: 16px`|
+|.g-m-lr-18 | `margin-left: 18px; margin-right: 18px`|
 |.g-m-lr-20 | `margin-left: 20px; margin-right: 20px`|
+|.g-m-lr-21 | `margin-left: 21px; margin-right: 21px`|
+|.g-m-lr-24 | `margin-left: 24px; margin-right: 24px`|
 |.g-m-lr-25 | `margin-left: 25px; margin-right: 25px`|
 |.g-m-lr-30 | `margin-left: 30px; margin-right: 30px`|
+|.g-m-lr-32 | `margin-left: 32px; margin-right: 32px`|
+|.g-m-lr-48 | `margin-left: 48px; margin-right: 48px`|
+|.g-m-lr-56 | `margin-left: 56px; margin-right: 56px`|
 |.g-m-t-5| `margin-top: 5px` |
+|.g-m-t-8| `margin-top: 8px` |
 |.g-m-t-10| `margin-top: 10px` |
+|.g-m-t-12| `margin-top: 12px` |
+|.g-m-t-13| `margin-top: 13px` |
 |.g-m-t-15| `margin-top: 15px` |
+|.g-m-t-16| `margin-top: 16px` |
+|.g-m-t-18| `margin-top: 18px` |
 |.g-m-t-20| `margin-top: 20px` |
+|.g-m-t-21| `margin-top: 21px` |
+|.g-m-t-24| `margin-top: 24px` |
 |.g-m-t-25| `margin-top: 25px` |
 |.g-m-t-30| `margin-top: 30px` |
+|.g-m-t-32| `margin-top: 32px` |
+|.g-m-t-48| `margin-top: 48px` |
+|.g-m-t-56| `margin-top: 56px` |
 |.g-m-l-5| `margin-left: 5px` |
+|.g-m-l-8| `margin-left: 8px` |
 |.g-m-l-10| `margin-left: 10px` |
+|.g-m-l-12| `margin-left: 12px` |
+|.g-m-l-13| `margin-left: 13px` |
 |.g-m-l-15| `margin-left: 15px` |
+|.g-m-l-16| `margin-left: 16px` |
+|.g-m-l-18| `margin-left: 18px` |
 |.g-m-l-20| `margin-left: 20px` |
+|.g-m-l-21| `margin-left: 21px` |
+|.g-m-l-24| `margin-left: 24px` |
 |.g-m-l-25| `margin-left: 25px` |
 |.g-m-l-30| `margin-left: 30px` |
+|.g-m-l-32| `margin-left: 32px` |
+|.g-m-l-48| `margin-left: 48px` |
+|.g-m-l-56| `margin-left: 56px` |
 |.g-m-b-5| `margin-bottom: 5px` |
+|.g-m-b-8| `margin-bottom: 8px` |
 |.g-m-b-10| `margin-bottom: 10px` |
+|.g-m-b-12| `margin-bottom: 12px` |
+|.g-m-b-13| `margin-bottom: 13px` |
 |.g-m-b-15| `margin-bottom: 15px` |
+|.g-m-b-16| `margin-bottom: 16px` |
+|.g-m-b-18| `margin-bottom: 18px` |
 |.g-m-b-20| `margin-bottom: 20px` |
+|.g-m-b-21| `margin-bottom: 21px` |
+|.g-m-b-24| `margin-bottom: 24px` |
 |.g-m-b-25| `margin-bottom: 25px` |
 |.g-m-b-30| `margin-bottom: 30px` |
+|.g-m-b-32| `margin-bottom: 32px` |
+|.g-m-b-48| `margin-bottom: 48px` |
+|.g-m-b-56| `margin-bottom: 56px` |
 |.g-m-r-5| `margin-right: 5px` |
+|.g-m-r-8| `margin-right: 8px` |
 |.g-m-r-10| `margin-right: 10px` |
+|.g-m-r-12| `margin-right: 12px` |
+|.g-m-r-13| `margin-right: 13px` |
 |.g-m-r-15| `margin-right: 15px` |
+|.g-m-r-16| `margin-right: 16px` |
+|.g-m-r-18| `margin-right: 18px` |
 |.g-m-r-20| `margin-right: 20px` |
+|.g-m-r-21| `margin-right: 21px` |
+|.g-m-r-24| `margin-right: 24px` |
 |.g-m-r-25| `margin-right: 25px` |
 |.g-m-r-30| `margin-right: 30px` |
+|.g-m-r-32| `margin-right: 32px` |
+|.g-m-r-48| `margin-right: 48px` |
+|.g-m-r-56| `margin-right: 56px` |
 
 > img大小 g-img-(值) 
 
 | class  | 备注  |
 |:-------------|:---------------| 
-|.g-img-40| 长宽`40px` |
-|.g-img-46 | 长宽`46px` |
-|.g-img-50 | 长宽`50px` |
-|.g-img-60 | 长宽`60px` |
-|.g-img-70 | 长宽`70px` |
-|.g-img-76 | 长宽`76px` |
-|.g-img-80 | 长宽`80px` |
-|.g-img-100 | 长宽`100px` |
-|.g-img-120 | 长宽`120px` |
-|.g-img-140 | 长宽`140px` |
-|.g-img-160 | 长宽`160px` |
+|.g-imgc-24| 圆形，长宽`24px` |
+|.g-imgc-32| 圆形，长宽`32px` |
+|.g-imgc-40| 圆形，长宽`40px` |
+|.g-imgc-56| 圆形，长宽`56px` |
+|.g-imgc-64| 圆形，长宽`64px` |
+|.g-imgr-24| 圆角4px，长宽`24px` |
+|.g-imgr-32| 圆角4px，长宽`32px` |
+|.g-imgr-40| 圆角4px，长宽`40px` |
+|.g-imgr-56| 圆角4px，长宽`56px` |
+|.g-imgr-64| 圆角4px，长宽`64px` |
+
 
 *  <h5 id="5.3"> 5.3 柵格 </h5>
 
@@ -437,6 +613,7 @@ npm install --save @wya/sass
 |.g-br-circle| border-radius: 100%; |
 |.g-br-sem| 默认圆角 (8px) |
 |.g-bs| 边框阴影|
+|.g-bs-t| 顶部阴影|
 |.g-disabled| 禁用事件 |
 |.g-noanimate| 禁用动画|
 |.g-show, .g-block, .g-dp-b| `display: block` |
