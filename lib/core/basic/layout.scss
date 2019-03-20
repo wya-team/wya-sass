@@ -59,6 +59,12 @@
 @include globalMargin($margin-list);
 
 /**
+ *  定义全局需要的img大小(lists)
+ *  return g-img-60
+ */
+@include globalImgSize($img-size-list);
+
+/**
  *  定义全局需要的img大小(lists) 圆形
  *  return g-imgc-60
  */
