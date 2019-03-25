@@ -210,13 +210,19 @@
 	white-space: nowrap;
 }
 
+/* stylelint-disable */
 @mixin commonTextLine($line) {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: $line;
+
+	/*! autoprefixer: off */ 
 	-webkit-box-orient: vertical;
+
+	/*! autoprefixer: on */
 }
+/* stylelint-enable */
 
 /**
  * g-break
