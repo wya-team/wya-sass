@@ -263,6 +263,23 @@
  * @param     {[type]}    $imgsize [description]
  * @return    {[type]}             [description]
  */
+@mixin globalImgSize($imgsize) {
+	@for $i from 1 through length($imgsize) {
+		.g-img-#{nth($imgsize, $i)} {
+			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
+			width: #{nth($imgsize, $i) / $scale}#{$unit};
+			height: #{nth($imgsize, $i) / $scale}#{$unit};
+			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+		}
+	}
+	
+}
+
+/**
+ * [globalImgSize 图片大小]
+ * @param     {[type]}    $imgsize [description]
+ * @return    {[type]}             [description]
+ */
 @mixin globalCircleImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
 		.g-imgc-#{nth($imgsize, $i)} {
