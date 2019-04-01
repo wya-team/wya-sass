@@ -67,7 +67,7 @@ $color-list: ('red-mid', $red-mid),
 	('info', $info), 
 	('success', $success), 
 	('error', $error), 
-	('warn', $warn) !default;
+	('warning', $warning) !default;
 @if $color-list-add {
 	$color-list: join($color-list, $color-list-add);
 }
@@ -115,7 +115,7 @@ $bg-color-list: ('red-mid', $red-mid),
 	('info', $info), 
 	('success', $success), 
 	('error', $error), 
-	('warn', $warn) !default;
+	('warning', $warning) !default;
 @if $bg-color-list-add {
 	$bg-color-list: join($bg-color-list, $bg-color-list-add);
 }
