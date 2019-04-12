@@ -5,7 +5,7 @@
 
 // 常用字体大小
 $font-size-list-add: false !default;
-$font-size-list: 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 50, 60, 70, 80, 90, 100 !default;
+$font-size-list: 10, 12, 13, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 50, 60, 70, 80, 90, 100 !default;
 @if $font-size-list-add {
 	$font-size-list: join($font-size-list, $font-size-list-add);
 }
@@ -51,8 +51,10 @@ $color-list: ('red-mid', $red-mid),
 	('white', $white),
 	('444', $c444), 
 	('67', $c67), 
+	('f2', $cf2), 
 	('f8', $cf8), 
 	('ef', $cef), 
+	('cd', $ccd), 
 	('e8', $ce8), 
 	('d9', $cd9), 
 	('f4', $cf4), 
@@ -63,6 +65,7 @@ $color-list: ('red-mid', $red-mid),
 	('67', $c67), 
 	('999', $c999), 
 	('aaa', $caaa), 
+	('bbb', $cbbb), 
 	('bd', $cbd), 
 	('info', $info), 
 	('success', $success), 
@@ -99,8 +102,10 @@ $bg-color-list: ('red-mid', $red-mid),
 	('white', $white),
 	('444', $c444), 
 	('67', $c67), 
+	('f2', $cf2), 
 	('f8', $cf8), 
 	('ef', $cef), 
+	('cd', $ccd), 
 	('e8', $ce8), 
 	('d9', $cd9), 
 	('f4', $cf4), 
@@ -110,6 +115,7 @@ $bg-color-list: ('red-mid', $red-mid),
 	('51', $c51), 
 	('67', $c67), 
 	('999', $c999), 
+	('bbb', $cbbb), 
 	('aaa', $caaa), 
 	('bd', $cbd), 
 	('info', $info), 
