@@ -204,7 +204,7 @@ npm install --save @wya/sass
 |.g-c-000 | `#000000` | <div style="color: #000000;">000000</div> |
 |.g-c-333 | `#333333` | <div style="color: #333333;">333333</div> |
 |.g-c-51 | `#515151` | <div style="color: #515151;">515151</div> |
-|.g-c-67 | `#676767` | <div style="color: #676767;">676767</div> |
+|.g-c-666 | `#666666` | <div style="color: #666666;">666666</div> |
 |.g-c-999 | `#999999` | <div style="color: #999999;">999999</div> |
 |.g-c-aaa | `#aaaaaa` | <div style="color: #aaaaaa;">aaaaaa</div> |
 |.g-c-bbb | `#bbbbbb` | <div style="color: #bbbbbb;">bbbbbb</div> |
@@ -252,7 +252,7 @@ npm install --save @wya/sass
 |.g-bg-000 | `#000000` | <div style="background: #000000; height: 10px" /> |
 |.g-bg-333 | `#333333` | <div style="background: #333333; height: 10px" /> |
 |.g-bg-51 | `#515151` | <div style="background: #515151; height: 10px" /> |
-|.g-bg-67 | `#676767` | <div style="background: #676767; height: 10px" /> |
+|.g-bg-666 | `#666666` | <div style="background: #666666; height: 10px" /> |
 |.g-bg-999 | `#999999` | <div style="background: #999999; height: 10px" /> |
 |.g-bg-aaa | `#aaaaaa` | <div style="background: #aaaaaa; height: 10px" /> |
 |.g-bg-bbb | `#bbbbbb` | <div style="background: #bbbbbb; height: 10px" /> |
