@@ -83,22 +83,22 @@
 	border-radius: $default-border-radius / $scale !important;
 }
 .g-b {
-	@include commonBorder(brtl);
+	@include commonBorder1PX();
 }
 .g-bb {
-	@include commonBorder(b);
+	@include commonBorder1PX(bottom);
 }
 
 .g-br {
-	@include commonBorder(r);
+	@include commonBorder1PX(right);
 }
 
 .g-bl {
-	@include commonBorder(l);
+	@include commonBorder1PX(left);
 }
 
 .g-bt {
-	@include commonBorder(t);
+	@include commonBorder1PX(top);
 }
 
 .g-bs {

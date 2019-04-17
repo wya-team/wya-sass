@@ -248,7 +248,8 @@
 	}
 	@if ($border) {
 		> * {
-			@include commonBorder(rb);
+			@include commonBorder1PX(right);
+			@include commonBorder1PX(bottom);
 		}
 		> *:nth-child(#{$col}n) {
 			&:before {

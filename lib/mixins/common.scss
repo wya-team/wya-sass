@@ -61,53 +61,133 @@
  * @param  {[string]} $border: ltbr          [border的方向缩写拼接]
  * @return {[type]}          [1px border]
  */
-@mixin commonBorder($border: ltbr, $color: $border-color, $width: 1px, $border-type: solid ) {
 
-	@if ($scale > 1) {
-		position: relative;
-		border: none;
-		transform: translateZ(0);
-		&:before {
-			content: '';
+/**
+ * 1px
+ * 已为父元素添加position: relative;
+ * 其他只操作before和after;
+ * 暂时不抽离公用
+ */
+
+@mixin commonBorder1PX($direction: '') {
+	position: relative;
+	transform: translateZ(0);
+	& {
+		&:before,
+		&:after {
 			position: absolute;
-			left: 0;
-			top: 0;
-			width: $scale * 100%;
-			height: $scale * 100%;
-			transform-origin: 0 0;
-			transform: scale(1 / $scale);
+			content: " ";
+			display: table;
+			clear: both;
 			box-sizing: border-box;
 			pointer-events: none;
 			z-index: -1;
-			@each $key in $border {
-				$len: str_length($border);
-
-				@while $len > 0 {
-
-					@if (commonDirectionFill(str_slice($border, $len, $len))) {
-						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width $border-type $color !important;
-					}
-					$len: $len - 1;
-				}
-			}
 		}
-	} @else {
-		$len: str_length($border);
-		@if ($len > 3) {
-			border: $width / $scale $border-type $color !important;
+		@if $direction == 'top' {
+			&:before {
+				border-top: 1px solid #e9e9e9;
+				left: 0;
+				top: 0;
+				width: 100%;
+				transform-origin: 0 top;
+			}
+		} @else if $direction == 'right' {
+			&:after {
+				border-right: 1px solid #e9e9e9;
+				top: 0;
+				right: 0;
+				height: 100%;
+				transform-origin: right 0;
+			}
+		} @else if $direction == 'bottom' {
+			&:after {
+				border-bottom: 1px solid #e9e9e9;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				transform-origin: 0 bottom;
+			}
+		} @else if $direction == 'left' {
+			&:before {
+				border-left: 1px solid #e9e9e9;
+				top: 0;
+				left: 0;
+				height: 100%;
+				transform-origin: left 0;
+			}
 		} @else {
-			@each $key  in $border {
-				@while $len > 0 {
-					@if (commonDirectionFill(str_slice($border, $len, $len))) {
-						border-#{commonDirectionFill(str_slice($border, $len, $len))}: $width / $scale $border-type $color !important;
-					}
-					$len: $len - 1;
+			&:after {
+				border: 1px solid #e9e9e9;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				transform-origin: 0 0;
+			}
+		}
+	}
+	@media (min-resolution: 2dppx) {
+		& {
+			@if $direction == 'top' {
+				&:before {
+					width: 200%;
+					transform: scale(0.5);
+				}
+			} @else if $direction == 'right' {
+				&:after {
+					height: 200%;
+					transform: scale(0.5);
+				}
+			} @else if $direction == 'bottom' {
+				&:after {
+					width: 200%;
+					transform: scale(0.5);
+				}
+			} @else if $direction == 'left' {
+				&:before {
+					height: 200%;
+					transform: scale(0.5);
+				}
+			} @else {
+				&:after {
+					width: 200%;
+					height: 200%;
+					transform: scale(0.5);
 				}
 			}
 		}
-
 	}
-
+	@media (min-resolution: 3dppx) {
+		& {
+			@if $direction == 'top' {
+				&:before {
+					width: 300%;
+					transform: scale(0.333);
+				}
+			} @else if $direction == 'right' {
+				&:after {
+					height: 300%;
+					transform: scale(0.333);
+				}
+			} @else if $direction == 'bottom' {
+				&:after {
+					width: 300%;
+					transform: scale(0.333);
+				}
+			} @else if $direction == 'left' {
+				&:before {
+					height: 300%;
+					transform: scale(0.333);
+				}
+			} @else {
+				&:after {
+					width: 300%;
+					height: 300%;
+					transform: scale(0.333);
+				}
+			}
+		}
+	}
 }
 
 /**
