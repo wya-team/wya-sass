@@ -1,6 +1,6 @@
 {
 	"name": "@wya/sass",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"description": "A modern alternative to Sass",
 	"main": "",
 	"files": [
