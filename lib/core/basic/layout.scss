@@ -80,7 +80,7 @@
 	border-radius: 100% !important;
 }
 .g-br-sem {
-	border-radius: $default-border-radius / $scale !important;
+	border-radius: $default-border-radius !important;
 }
 .g-b {
 	@include commonBorder1PX();
@@ -138,7 +138,8 @@
  * 历史遗留 暂时先同时保留
  */
 .g-nobreak, .g-break {
-	@include commonWordBreak;
+	word-break: break-all;
+	word-wrap: break-word;
 }
 
 .g-fixed {
@@ -211,16 +212,16 @@
  * 两行文字 限高
  */
 .g-two-lh {
-	height: $line-height-limit * 2 / $scale;
-	line-height: $line-height-limit / $scale;
+	height: $line-height-limit * 2;
+	line-height: $line-height-limit;
 }
 
 /**
  * 一行文字 限高
  */
 .g-one-lh {
-	height: $line-height-limit / $scale;
-	line-height: $line-height-limit / $scale;
+	height: $line-height-limit;
+	line-height: $line-height-limit;
 }
 
 /**
@@ -264,8 +265,8 @@
   * dot 圆点
   */
 .g-dot {
-	width: 5px / $scale;
-	height: 5px / $scale;
+	width: 5px;
+	height: 5px;
 	border-radius: 50%;
 	display: block;
 }

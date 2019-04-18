@@ -29,11 +29,11 @@
 		@if (type-of(nth($fontSize, $i)) == 'number') {
 			@if (unitless(nth($fontSize, $i))) {
 				.g-fs-#{nth($fontSize, $i)} {
-					font-size: #{nth($fontSize, $i) / $scale}#{$unit};
+					font-size: #{nth($fontSize, $i)}#{$unit};
 				}
 			} @else {
 				.g-fs-#{nth($fontSize, $i)} {
-					font-size: #{nth($fontSize, $i) / $scale};
+					font-size: #{nth($fontSize, $i)};
 				}
 			}
 		}
@@ -51,11 +51,11 @@
 		@if (type-of(nth($line-height, $i)) == 'number') {
 			@if (unitless(nth($line-height, $i))) {
 				.g-lh-#{nth($line-height, $i)} {
-					line-height: #{nth($line-height, $i) / $scale}#{$unit};
+					line-height: #{nth($line-height, $i)}#{$unit};
 				}
 			} @else {
 				.g-lh-#{nth($line-height, $i)} {
-					line-height: #{nth($line-height, $i) / $scale};
+					line-height: #{nth($line-height, $i)};
 				}
 			}
 		}
@@ -267,10 +267,10 @@
 @mixin globalImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
 		.g-img-#{nth($imgsize, $i)} {
-			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
-			width: #{nth($imgsize, $i) / $scale}#{$unit};
-			height: #{nth($imgsize, $i) / $scale}#{$unit};
-			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+			max-width: #{nth($imgsize, $i)}#{$unit};
+			width: #{nth($imgsize, $i)}#{$unit};
+			height: #{nth($imgsize, $i)}#{$unit};
+			line-height: #{nth($imgsize, $i)}#{$unit};
 		}
 	}
 	
@@ -284,10 +284,10 @@
 @mixin globalCircleImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
 		.g-imgc-#{nth($imgsize, $i)} {
-			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
-			width: #{nth($imgsize, $i) / $scale}#{$unit};
-			height: #{nth($imgsize, $i) / $scale}#{$unit};
-			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+			max-width: #{nth($imgsize, $i)}#{$unit};
+			width: #{nth($imgsize, $i)}#{$unit};
+			height: #{nth($imgsize, $i)}#{$unit};
+			line-height: #{nth($imgsize, $i)}#{$unit};
 			border-radius: 50%;
 		}
 	}
@@ -296,10 +296,10 @@
 @mixin globalRadiusImgSize($imgsize) {
 	@for $i from 1 through length($imgsize) {
 		.g-imgr-#{nth($imgsize, $i)} {
-			max-width: #{nth($imgsize, $i) / $scale}#{$unit};
-			width: #{nth($imgsize, $i) / $scale}#{$unit};
-			height: #{nth($imgsize, $i) / $scale}#{$unit};
-			line-height: #{nth($imgsize, $i) / $scale}#{$unit};
+			max-width: #{nth($imgsize, $i)}#{$unit};
+			width: #{nth($imgsize, $i)}#{$unit};
+			height: #{nth($imgsize, $i)}#{$unit};
+			line-height: #{nth($imgsize, $i)}#{$unit};
 			border-radius: 4px;
 		}
 	}

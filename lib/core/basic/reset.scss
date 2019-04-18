@@ -131,9 +131,9 @@ body {
 	 * scrollbar width
 	 */
 	&::-webkit-scrollbar {
-		width: 4px / $scale;
+		width: 4px;
 		&:horizontal {
-			height: 2px / $scale;
+			height: 2px;
 		}
 	}
 	
@@ -142,7 +142,7 @@ body {
 	 */
 	&::-webkit-scrollbar-track {
 		box-shadow: $scrollbar-track-box-shadow;
-		border-radius: 5px / $scale;
+		border-radius: 5px;
 		background: $scrollbar-track-bg-color;
 	}
 
@@ -150,7 +150,7 @@ body {
 	 * Handle
 	 */
 	&::-webkit-scrollbar-thumb {
-		border-radius: 5px / $scale;
+		border-radius: 5px;
 		background: $scrollbar-thumb-bg-color;
 	}
 }

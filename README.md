@@ -644,16 +644,7 @@ npm install --save @wya/sass
 |.g-disabled| 无点击事件 |
 
 
-*  <h5 id="5.7"> 5.7动画 </h5>
-
-| class  | 备注  |
-|:-------------|:---------------| 
-|.g-popup-down| 向下弹出 height：50% |
-|.g-popup-up| 向上弹出 height：50% |
-|.g-popup-left| 向左弹出 height：50% |
-|.g-popup-right| 向右弹出 height：50% |
-|.g-bg-mask| 遮罩层|
-|.g-modal| 居中弹窗 |
+> 动画请使用vc-transtion or rc-transtion
 
 
 

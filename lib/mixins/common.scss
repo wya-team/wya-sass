@@ -18,42 +18,13 @@
 }
 
 /**
- * [commonScale 缩放比例]
- * @param  {[number]} $value [值 可带单位]
- * @return {[number]}        [缩放后的值]
- */
-@function commonScale($value) {
-	@if (unitless($value)) {
-		@return $value / $scale#{$unit};
-	} @else {
-		@return $value / $scale;
-	}
-}
-
-/**
  * [commonColumnWidth 平均分配百分比]
  * @param  {[number]} $col   [所占比]
  * @param  {[number]} $total [总]
  * @return {[number]}        [所占比/总 * 100%]
  */
 @function commonColumnWidth($col, $total) {
-	@return percentage($col/$total);
-}
-
-/**
- * [commonSize 宽高 带有缩放功能]
- * @param  {[number]} $w    [宽度]
- * @param  {[number]} $h:$w [高度  默认等于宽度]
- * @return {[type]}       [宽高]
- */
-@mixin commonSize($w,$h:$w) {
-	@if (unitless($w)) {
-		width: $w / $scale#{$unit};
-		height: $h / $scale#{$unit};
-	} @else {
-		width: $w / $scale;
-		height: $h / $scale;
-	}
+	@return percentage($col / $total);
 }
 
 /**
@@ -191,18 +162,6 @@
 }
 
 /**
- * [commonOpacity 透明度的兼容]
- * @param  {[type]} $opacity [透明度]
- * @return {[type]}          [兼容透明度属性]
- */
-@mixin commonOpacity($opacity) {
-	opacity: $opacity;
-	// IE8 filter
-	$opacity-ie: ($opacity * 100);
-	filter: "alpha(opacity=#{$opacity-ie})";
-}
-
-/**
  * [commonPadding padding]
  * @param  {[number/string]} $t  [string 方向首字母拼接 top的距离]
  * @param  {[number]} $r: $t            [right的距离]
@@ -212,12 +171,12 @@
  */
 @mixin commonPadding($t, $r: $t, $b: $t, $l: $r) {
 	@if (type-of($t) == 'number') {
-		padding: if(unitless($t), #{$t / $scale}#{$unit}, #{$t / $scale}) if(unitless($r), #{$r / $scale}#{$unit}, #{$r / $scale}) if(unitless($b), #{$b / $scale}#{$unit}, #{$b / $scale}) if(unitless($l), #{$l / $scale}#{$unit}, #{$l / $scale});
+		padding: if(unitless($t), #{$t}#{$unit}, #{$t}) if(unitless($r), #{$r}#{$unit}, #{$r}) if(unitless($b), #{$b}#{$unit}, #{$b}) if(unitless($l), #{$l}#{$unit}, #{$l});
 	} @else if (type-of($t) == 'string') {
 		$len: str_length($t);
 		@while $len > 0 {
 			@if (commonDirectionFill(str_slice($t, $len, $len))) {
-				padding-#{commonDirectionFill(str_slice($t, $len, $len))}: if(unitless($r), #{$r / $scale}#{$unit}, #{$r / $scale});
+				padding-#{commonDirectionFill(str_slice($t, $len, $len))}: if(unitless($r), #{$r}#{$unit}, #{$r});
 			}
 			$len: $len - 1;
 		}
@@ -234,12 +193,12 @@
  */
 @mixin commonMargin($t, $r: $t, $b: $t, $l: $r) {
 	@if (type-of($t) == 'number') {
-		margin: if(unitless($t), #{$t / $scale}#{$unit}, #{$t / $scale}) if(unitless($r), #{$r / $scale}#{$unit}, #{$r / $scale}) if(unitless($b), #{$b / $scale}#{$unit}, #{$b / $scale}) if(unitless($l), #{$l / $scale}#{$unit}, #{$l / $scale});
+		margin: if(unitless($t), #{$t}#{$unit}, #{$t}) if(unitless($r), #{$r}#{$unit}, #{$r}) if(unitless($b), #{$b}#{$unit}, #{$b}) if(unitless($l), #{$l}#{$unit}, #{$l});
 	} @else if (type-of($t) == 'string') {
 		$len: str_length($t);
 		@while $len > 0 {
 			@if (commonDirectionFill(str_slice($t, $len, $len))) {
-				margin-#{commonDirectionFill(str_slice($t, $len, $len))}: if(unitless($r), #{$r / $scale}#{$unit}, #{$r / $scale});
+				margin-#{commonDirectionFill(str_slice($t, $len, $len))}: if(unitless($r), #{$r}#{$unit}, #{$r});
 			}
 			$len: $len - 1;
 		}
@@ -256,7 +215,7 @@
 	$direction: top, right, bottom, left;
 	@for $i from 1 through 4 {
 		@if (type_of(nth($direction-val, $i)) == 'number') {
-			#{nth($direction, $i)}: nth($direction-val, $i) / $scale;
+			#{nth($direction, $i)}: nth($direction-val, $i);
 		}
 	}
 
@@ -302,31 +261,27 @@
 
 	/*! autoprefixer: on */
 }
-/* stylelint-enable */
-
-/**
- * g-break
- * 单词换行
- */
-@mixin commonWordBreak {
-	word-break: break-all;
-	word-wrap: break-word;
-}
 
 /**
  * [commonClearfix 清除浮动]
  * @return {[type]} [description]
  */
-@mixin commonClearfix {
+
+@mixin commonClearfix($content: false) {
 	zoom: 1;
 	&:before,
 	&:after {
 		content: " ";
 		display: table;
 		clear: both;
-		visibility: hidden;
-		font-size: 0;
-		height: 0;
+		@if $content {
+			@content;
+		} @else {
+			visibility: hidden;
+			font-size: 0;
+			height: 0;
+		}
+ 		
 	}
 }
 
@@ -359,60 +314,5 @@
 		-webkit-border-radius: 5px;
 		border-radius: 5px;
 		background: rgba(0, 0, 0, 0.2);
-	}
-}
-
-@mixin commonPopup($container-height: 650px, $container-width: 1010px, $content-height: 600px, $white: white) {
-	@include commonScroll();
-	@include commonFlexCc();
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	z-index: 999;
-	.__mask {
-		position: absolute;
-		z-index: 997;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(#000, 0.1);
-		opacity: 0;
-		transition: opacity 0.2s;
-	}
-	.__container {
-		height: $container-height;
-		width: $container-width;
-		background: $white;
-		position: absolute;
-		z-index: 998;
-		top: 50%;
-		left: 50%;
-		border-radius: 3px;
-		box-shadow: 0 15px 30px rgba(#000, 0.1);
-		opacity: 0;
-		transform: translate(-50%, -50%);
-		transition: transform 0.2s, opacity 0.2s;
-	}
-	&.__active {
-		.__mask {
-			opacity: 1;
-		}
-		.__container {
-			opacity: 1;
-			transform: translate(-50%, -60%);
-		}
-	}
-	.__header {
-		@include commonFlex();
-		justify-content: space-between;
-		align-items: center;
-		// background: $white;
-		padding: 10px 20px;
-		flex: 1;
-		border-bottom: $border;
-		height: $container-height - $content-height; // margin-bottom: 10px
 	}
 }
