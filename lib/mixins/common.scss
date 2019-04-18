@@ -52,7 +52,8 @@
 			clear: both;
 			box-sizing: border-box;
 			pointer-events: none;
-			z-index: -1;
+			z-index: 1; // 层级应高于其他元素, 否则描边会被遮挡 
+			border-radius: inherit; // 圆角集成
 		}
 		@if $direction == 'top' {
 			&:before {
