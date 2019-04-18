@@ -40,7 +40,7 @@
  * 暂时不抽离公用
  */
 
-@mixin commonBorder1PX($direction: '') {
+@mixin commonBorder1PX($direction: '', $color: $border-color) {
 	position: relative;
 	transform: translateZ(0);
 	& {
@@ -56,7 +56,7 @@
 		}
 		@if $direction == 'top' {
 			&:before {
-				border-top: 1px solid $border-color;
+				border-top: 1px solid $color;
 				left: 0;
 				top: 0;
 				width: 100%;
@@ -64,7 +64,7 @@
 			}
 		} @else if $direction == 'right' {
 			&:after {
-				border-right: 1px solid $border-color;
+				border-right: 1px solid $color;
 				top: 0;
 				right: 0;
 				height: 100%;
@@ -72,7 +72,7 @@
 			}
 		} @else if $direction == 'bottom' {
 			&:after {
-				border-bottom: 1px solid $border-color;
+				border-bottom: 1px solid $color;
 				left: 0;
 				bottom: 0;
 				width: 100%;
@@ -80,7 +80,7 @@
 			}
 		} @else if $direction == 'left' {
 			&:before {
-				border-left: 1px solid $border-color;
+				border-left: 1px solid $color;
 				top: 0;
 				left: 0;
 				height: 100%;
@@ -88,7 +88,7 @@
 			}
 		} @else {
 			&:after {
-				border: 1px solid $border-color;
+				border: 1px solid $color;
 				left: 0;
 				top: 0;
 				width: 100%;
