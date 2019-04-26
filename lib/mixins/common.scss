@@ -273,7 +273,7 @@
 	&:before,
 	&:after {
 		content: " ";
-		display: table;
+		display: block; // 父类为flex, 使用table无法撑开
 		clear: both;
 		@if $content {
 			@content;
