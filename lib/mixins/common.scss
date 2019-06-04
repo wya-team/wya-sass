@@ -40,7 +40,7 @@
  * 暂时不抽离公用
  */
 
-@mixin commonBorder1PX($direction: '', $color: $border-color) {
+@mixin commonBorder1PX($direction: '', $color: $border-color, $media: true) {
 	position: relative;
 	transform: translateZ(0);
 	& {
@@ -98,64 +98,66 @@
 			}
 		}
 	}
-	@media (min-resolution: 2dppx) {
-		& {
-			@if $direction == 'top' {
-				&:before {
-					width: 200%;
-					transform: scale(0.5);
-				}
-			} @else if $direction == 'right' {
-				&:after {
-					height: 200%;
-					transform: scale(0.5);
-				}
-			} @else if $direction == 'bottom' {
-				&:after {
-					width: 200%;
-					transform: scale(0.5);
-				}
-			} @else if $direction == 'left' {
-				&:before {
-					height: 200%;
-					transform: scale(0.5);
-				}
-			} @else {
-				&:after {
-					width: 200%;
-					height: 200%;
-					transform: scale(0.5);
+	@if $media == true {
+		@media (min-resolution: 2dppx) {
+			& {
+				@if $direction == 'top' {
+					&:before {
+						width: 200%;
+						transform: scale(0.5);
+					}
+				} @else if $direction == 'right' {
+					&:after {
+						height: 200%;
+						transform: scale(0.5);
+					}
+				} @else if $direction == 'bottom' {
+					&:after {
+						width: 200%;
+						transform: scale(0.5);
+					}
+				} @else if $direction == 'left' {
+					&:before {
+						height: 200%;
+						transform: scale(0.5);
+					}
+				} @else {
+					&:after {
+						width: 200%;
+						height: 200%;
+						transform: scale(0.5);
+					}
 				}
 			}
 		}
-	}
-	@media (min-resolution: 3dppx) {
-		& {
-			@if $direction == 'top' {
-				&:before {
-					width: 300%;
-					transform: scale(0.333);
-				}
-			} @else if $direction == 'right' {
-				&:after {
-					height: 300%;
-					transform: scale(0.333);
-				}
-			} @else if $direction == 'bottom' {
-				&:after {
-					width: 300%;
-					transform: scale(0.333);
-				}
-			} @else if $direction == 'left' {
-				&:before {
-					height: 300%;
-					transform: scale(0.333);
-				}
-			} @else {
-				&:after {
-					width: 300%;
-					height: 300%;
-					transform: scale(0.333);
+		@media (min-resolution: 3dppx) {
+			& {
+				@if $direction == 'top' {
+					&:before {
+						width: 300%;
+						transform: scale(0.333);
+					}
+				} @else if $direction == 'right' {
+					&:after {
+						height: 300%;
+						transform: scale(0.333);
+					}
+				} @else if $direction == 'bottom' {
+					&:after {
+						width: 300%;
+						transform: scale(0.333);
+					}
+				} @else if $direction == 'left' {
+					&:before {
+						height: 300%;
+						transform: scale(0.333);
+					}
+				} @else {
+					&:after {
+						width: 300%;
+						height: 300%;
+						transform: scale(0.333);
+					}
 				}
 			}
 		}
