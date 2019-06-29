@@ -38,8 +38,7 @@ body {
 	}
 	a {
 		text-decoration: none;
-		color: inherit;
-		&:visited {
+		&, &:visited, &:hover {
 			color: inherit;
 		}
 	}
