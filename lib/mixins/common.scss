@@ -134,7 +134,7 @@
 			& {
 				@if $direction == 'top' {
 					&:before {
-						width: 297%;
+						width: 300%;
 						transform: scale(0.333);
 					}
 				} @else if $direction == 'right' {
@@ -144,7 +144,7 @@
 					}
 				} @else if $direction == 'bottom' {
 					&:after {
-						width: 297%;
+						width: 300%;
 						transform: scale(0.333);
 					}
 				} @else if $direction == 'left' {
@@ -154,7 +154,7 @@
 					}
 				} @else {
 					&:after {
-						width: 297%;
+						width: 300%;
 						height: 300%;
 						transform: scale(0.333);
 					}
