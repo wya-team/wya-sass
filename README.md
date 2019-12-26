@@ -617,7 +617,9 @@ npm install --save @wya/sass
 |.g-td-lh| 删除线|
 |.g-td-ul| 下划线|
 |.g-nowrap| 不换行|
-|.g-nobreak| 字母数字不换行|
+|.g-nobreak| 字母数字换行|
+|.g-break| 字母数字换行|
+|.g-allbreak| 所有文本换行|
 
 > 其他
 
