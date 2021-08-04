@@ -1,63 +1,70 @@
-var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')();
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const del = require('del');
+const sass = require('gulp-sass')(require('sass'));
 
-var stripCssComments = require('gulp-strip-css-comments'); 
-var paths = {
+const stripCssComments = require('gulp-strip-css-comments'); 
+const autoprefixer = require('gulp-autoprefixer'); 
+const cleanCss = require('gulp-clean-css'); 
+
+const paths = {
 	css: 'lib',
 	dist: 'dist',
 	distCss: 'dist/'
 };
-var srcFiles = {
+const srcFiles = {
 	css: [
 		paths.css + "/*.css",
 		paths.css + "/*.scss"
 	]
 };
-var files = {
+const files = {
 	css: [
-		paths.css + "/*.css",
-		paths.css + "/*.scss",
 		paths.css + "/**/*.css",
 		paths.css + "/**/*.scss"
 	]
 };
 
-// 清洁
-gulp.task('clean', function() {
-	return gulp.src(paths.dist)
-		.pipe(plugins.clean({
-			force: true
-		}));
-});
-// css，scss文件
-gulp.task("styles", function() {
-	return gulp.src(srcFiles.css)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(stripCssComments())
-		.pipe(plugins.autoprefixer({
-			browsers: ['ie 6', 'ie 7', 'ie 8', 'ie 9', 'Android < 4.0', 'Firefox < 20', 'Opera < 12.1', 'last 2 versions'],
-			cascade: true,
-			remove: true
-		}))
-		.pipe(plugins.minifyCss({
-			 advanced: false
-		}))
-		.pipe(gulp.dest(paths.distCss));
-});
+class Compiler {
+	// 清洁
+	static clean = (opts = {}) => {
+		return function clean() {
+			return del([ paths.dist ]);
+		};
+	}
 
-gulp.task("watch:css", function() {
-	// 监听css变化
-	gulp.watch(files.css, function() {
-		gulp.run('styles');
-	});
-});
+	// css，scss文件
+	static styles = (opts = {}) => {
+		return function styles() {
+			return gulp.src(srcFiles.css)
+				.pipe(sass().on('error', sass.logError))
+				.pipe(stripCssComments())
+				.pipe(autoprefixer({
+					cascade: true,
+					remove: true
+				}))
+				.pipe(cleanCss({
+					 advanced: false
+				}))
+				.pipe(gulp.dest(paths.distCss));
+		}
+	}
+}
 
-gulp.task('default', function() {
-	gulp.run('styles');
-	gulp.run('watch:css');
-});
+// build task
+const build = gulp.series(
+	Compiler.clean(),
+	Compiler.styles()
+);
 
-gulp.task('build', ['clean'], function() {
-	gulp.run('default');
-});
+// dev task
+const dev = gulp.series(
+	Compiler.clean(),
+	Compiler.styles(),
+	function watch() {
+		gulp.watch(files.css, Compiler.styles);
+	}
+);
+
+exports.default = build;
+exports.build = build;
+exports.dev = dev;

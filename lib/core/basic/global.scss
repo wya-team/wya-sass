@@ -1,6 +1,7 @@
 /**
  * global
  */
+@use 'sass:math';
 
 /**
  * [globalStrConcat description]
@@ -238,8 +239,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	> * {
-		flex: 0 0 #{100 / $col}#{'%'};
-		width: #{100 / $col}vw; // 兼容
+		flex: 0 0 #{math.div(100, $col)}#{'%'};
+		width: #{math.div(100, $col)}vw; // 兼容
 		display: flex;
 		flex-direction: $flex-direction;
 		justify-content: $justify-content;
